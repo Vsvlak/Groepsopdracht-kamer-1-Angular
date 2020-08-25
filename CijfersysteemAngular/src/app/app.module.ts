@@ -6,7 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { TabelComponent } from './homepage/tabel/tabel.component';
+import { LeerlingTabelComponent } from './homepage/leerlingtabel/leerlingtabel.component';
 import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
@@ -16,7 +16,7 @@ import { HttpClientModule} from '@angular/common/http'
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    TabelComponent
+    LeerlingTabelComponent
   ],
   imports: [
     BrowserModule,
