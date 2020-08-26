@@ -20,6 +20,8 @@ import { ToetsTabelComponent } from './components/toets-tabel/toets-tabel.compon
 import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.component';
 import { ViewToetsenVanVakPageComponent } from './view-toetsen-van-vak-page/view-toetsen-van-vak-page.component';
 import { ToetsVanVakTabelComponent } from './components/toets-van-vak-tabel/toets-van-vak-tabel.component';
+import { DocentCijferTabelComponent } from './components/docent-cijfer-tabel/docent-cijfer-tabel.component';
+import { ViewCijfersDocentPageComponent } from './view-cijfers-docent-page/view-cijfers-docent-page.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ToetsVanVakTabelComponent } from './components/toets-van-vak-tabel/toet
     ToetsTabelComponent,
     ViewToetsenPageComponent,
     ViewToetsenVanVakPageComponent,
-    ToetsVanVakTabelComponent
+    ToetsVanVakTabelComponent,
+    DocentCijferTabelComponent,
+    ViewCijfersDocentPageComponent
   ],
   imports: [
     BrowserModule,
