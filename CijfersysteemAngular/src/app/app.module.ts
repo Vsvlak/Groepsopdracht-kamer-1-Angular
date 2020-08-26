@@ -8,7 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LeerlingTabelComponent } from './components/leerlingtabel/leerlingtabel.component';
 import { HttpClientModule} from '@angular/common/http';
-import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlingen-page.component'
+import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlingen-page.component';
+import { DocenttabelComponent } from './components/docenttabel/docenttabel.component';
+import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
+import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlin
     FooterComponent,
     HomepageComponent,
     LeerlingTabelComponent,
-    ViewLeerlingenPageComponent
+    ViewLeerlingenPageComponent,
+    DocenttabelComponent,
+    ViewDocentenPageComponent,
+    ViewDocentVakPageComponent
   ],
   imports: [
     BrowserModule,
