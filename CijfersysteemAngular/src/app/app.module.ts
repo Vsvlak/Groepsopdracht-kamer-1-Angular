@@ -18,9 +18,12 @@ import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-pa
 import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component';
 import { KlasleerlingtabelComponent } from './components/klasleerlingtabel/klasleerlingtabel.component';
 import { ViewLeerlingenVanKlasPageComponent } from './view-leerlingen-van-klas-page/view-leerlingen-van-klas-page.component';
-
-
-
+import { ToetsTabelComponent } from './components/toets-tabel/toets-tabel.component';
+import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.component';
+import { ViewToetsenVanVakPageComponent } from './view-toetsen-van-vak-page/view-toetsen-van-vak-page.component';
+import { ToetsVanVakTabelComponent } from './components/toets-van-vak-tabel/toets-van-vak-tabel.component';
+import { DocentCijferTabelComponent } from './components/docent-cijfer-tabel/docent-cijfer-tabel.component';
+import { ViewCijfersDocentPageComponent } from './view-cijfers-docent-page/view-cijfers-docent-page.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +42,14 @@ import { ViewLeerlingenVanKlasPageComponent } from './view-leerlingen-van-klas-p
     ViewDocentenPageComponent,
     ViewDocentVakPageComponent,
     KlasleerlingtabelComponent,
-    ViewLeerlingenVanKlasPageComponent
-    ],
+    ViewLeerlingenVanKlasPageComponent,
+    ToetsTabelComponent,
+    ViewToetsenPageComponent,
+    ViewToetsenVanVakPageComponent,
+    ToetsVanVakTabelComponent,
+    DocentCijferTabelComponent,
+    ViewCijfersDocentPageComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -7,6 +7,10 @@ import { ViewVakkenPageComponent } from './view-vakken-page/view-vakken-page.com
 import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
 import { ViewDocentVakPageComponent} from './view-docent-vak-page/view-docent-vak-page.component';
 import { ViewLeerlingenVanKlasPageComponent } from './view-leerlingen-van-klas-page/view-leerlingen-van-klas-page.component';
+import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component';
+import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.component';
+import { ViewToetsenVanVakPageComponent } from './view-toetsen-van-vak-page/view-toetsen-van-vak-page.component';
+import { ViewCijfersDocentPageComponent } from './view-cijfers-docent-page/view-cijfers-docent-page.component';
 
 const routes: Routes = [
   {path: "", component: HomepageComponent, pathMatch: "full"},
@@ -15,7 +19,10 @@ const routes: Routes = [
   {path: 'vakken', component: ViewVakkenPageComponent},
   {path: 'docenten', component: ViewDocentenPageComponent},
   {path: 'docent/:id', component: ViewDocentVakPageComponent},
-  {path: 'leerlingen/:klasid' , component: ViewLeerlingenVanKlasPageComponent}
+  {path: 'leerlingen/:klasid' , component: ViewLeerlingenVanKlasPageComponent},
+  {path: 'toetsen', component: ViewToetsenPageComponent},
+  {path: 'toetsen/:vakid', component: ViewToetsenVanVakPageComponent},
+  {path: 'cijfers/:docentid/:vakid/:klasid', component: ViewCijfersDocentPageComponent}
 ];
 
 @NgModule({
