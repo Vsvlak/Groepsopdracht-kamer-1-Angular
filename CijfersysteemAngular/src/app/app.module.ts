@@ -6,8 +6,9 @@ import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { LeerlingTabelComponent } from './homepage/leerlingtabel/leerlingtabel.component';
-import { HttpClientModule} from '@angular/common/http'
+import { LeerlingTabelComponent } from './components/leerlingtabel/leerlingtabel.component';
+import { HttpClientModule} from '@angular/common/http';
+import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlingen-page.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule} from '@angular/common/http'
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    LeerlingTabelComponent
+    LeerlingTabelComponent,
+    ViewLeerlingenPageComponent
   ],
   imports: [
     BrowserModule,
