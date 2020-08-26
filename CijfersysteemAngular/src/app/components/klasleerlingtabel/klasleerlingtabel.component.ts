@@ -13,11 +13,15 @@ export class KlasleerlingtabelComponent implements OnInit {
 
 leerlingen: LeerlingDto[];
 
-  constructor(private ls: LeerlingService, private ActivatedRoute: ActivatedRoute) { }
+  constructor(private ls: LeerlingService, private activatedrouter: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    
+    this.activatedrouter.paramMap.subscribe(params =>{
+      this.ls.findLeerlingenVanKlas(Number.parseInt(params.get("klasid"))).subscribe(leerlingenlijst => {
+        this.leerlingen = leerlingenlijst;
+      });
+    })
 
 
   }

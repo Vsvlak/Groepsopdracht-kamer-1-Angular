@@ -17,7 +17,8 @@ import { DocenttabelComponent } from './components/docenttabel/docenttabel.compo
 import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
 import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component';
 import { KlasleerlingtabelComponent } from './components/klasleerlingtabel/klasleerlingtabel.component';
-import { LeerlingService } from './service/leerling.service';
+import { ViewLeerlingenVanKlasPageComponent } from './view-leerlingen-van-klas-page/view-leerlingen-van-klas-page.component';
+
 
 
 
@@ -37,7 +38,8 @@ import { LeerlingService } from './service/leerling.service';
     DocenttabelComponent,
     ViewDocentenPageComponent,
     ViewDocentVakPageComponent,
-    KlasleerlingtabelComponent
+    KlasleerlingtabelComponent,
+    ViewLeerlingenVanKlasPageComponent
     ],
   imports: [
     BrowserModule,
