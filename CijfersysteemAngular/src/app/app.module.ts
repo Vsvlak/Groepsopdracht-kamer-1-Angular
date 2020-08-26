@@ -25,7 +25,7 @@ import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-v
     LeerlingTabelComponent,
     ViewLeerlingenPageComponent,
     VaktabelComponent,
-    ViewVakkenPageComponent
+    ViewVakkenPageComponent,
     DocenttabelComponent,
     ViewDocentenPageComponent,
     ViewDocentVakPageComponent
