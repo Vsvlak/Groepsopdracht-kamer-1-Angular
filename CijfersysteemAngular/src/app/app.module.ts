@@ -16,6 +16,8 @@ import { ViewVakkenPageComponent } from './view-vakken-page/view-vakken-page.com
 import { DocenttabelComponent } from './components/docenttabel/docenttabel.component';
 import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
 import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component';
+import { KlasleerlingtabelComponent } from './components/klasleerlingtabel/klasleerlingtabel.component';
+import { ViewLeerlingenVanKlasPageComponent } from './view-leerlingen-van-klas-page/view-leerlingen-van-klas-page.component';
 import { ToetsTabelComponent } from './components/toets-tabel/toets-tabel.component';
 import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.component';
 import { ViewToetsenVanVakPageComponent } from './view-toetsen-van-vak-page/view-toetsen-van-vak-page.component';
@@ -39,6 +41,8 @@ import { ViewCijfersDocentPageComponent } from './view-cijfers-docent-page/view-
     DocenttabelComponent,
     ViewDocentenPageComponent,
     ViewDocentVakPageComponent,
+    KlasleerlingtabelComponent,
+    ViewLeerlingenVanKlasPageComponent,
     ToetsTabelComponent,
     ViewToetsenPageComponent,
     ViewToetsenVanVakPageComponent,
