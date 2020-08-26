@@ -9,7 +9,7 @@ import { ViewDocentVakPageComponent} from './view-docent-vak-page/view-docent-va
 const routes: Routes = [
   {path: "", component: HomepageComponent, pathMatch: "full"},
   {path: 'leerlingen', component: ViewLeerlingenPageComponent},
-  {path: 'vakken', component: ViewVakkenPageComponent}
+  {path: 'vakken', component: ViewVakkenPageComponent},
   {path: 'docenten', component: ViewDocentenPageComponent},
   {path: 'docent/:id', component: ViewDocentVakPageComponent}
 
