@@ -1,0 +1,20 @@
+<p>klasleerlingtabel works!</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Leerlingnummer</th>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leerlingDto of leerlingen">
+
+            <td>{{leerlingDto.id}}</td>
+            <td>{{leerlingDto.voornaam}}</td>
+            <td>{{leerlingDto.achternaam}}</td>
+        </tr>
+    </tbody>
+
+</table>

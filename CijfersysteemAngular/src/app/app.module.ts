@@ -15,7 +15,11 @@ import { VaktabelComponent } from './components/vaktabel/vaktabel.component';
 import { ViewVakkenPageComponent } from './view-vakken-page/view-vakken-page.component'
 import { DocenttabelComponent } from './components/docenttabel/docenttabel.component';
 import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
-import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component'
+import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component';
+import { KlasleerlingtabelComponent } from './components/klasleerlingtabel/klasleerlingtabel.component';
+import { LeerlingService } from './service/leerling.service';
+
+
 
 @NgModule({
   declarations: [
@@ -32,8 +36,9 @@ import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-v
     ViewVakkenPageComponent,
     DocenttabelComponent,
     ViewDocentenPageComponent,
-    ViewDocentVakPageComponent
-  ],
+    ViewDocentVakPageComponent,
+    KlasleerlingtabelComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

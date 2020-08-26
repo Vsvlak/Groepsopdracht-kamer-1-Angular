@@ -14,6 +14,10 @@ export class LeerlingService {
 
 
   findLeerlingen(): Observable<LeerlingDto[]> {
-    return this.http.get<LeerlingDto[]>('http://localhost:8082/leerlingOverzicht')
+    return this.http.get<LeerlingDto[]>('http://localhost:8082/leerlingOverzicht');
+  }
+
+  findLeerlingenVanKlas(klasid: number): Observable<LeerlingDto[]> {
+    return this.http.get<LeerlingDto[]>("http://localhost:8082/leerlingenInKlas/" + klasid);
   }
 }
