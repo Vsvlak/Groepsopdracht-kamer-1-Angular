@@ -9,6 +9,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LeerlingTabelComponent } from './components/leerlingtabel/leerlingtabel.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlingen-page.component';
+import { KlastabelComponent } from './components/klastabel/klastabel.component';
+import { ViewKlassenPageComponent } from './view-klassen-page/view-klassen-page.component';
 import { VaktabelComponent } from './components/vaktabel/vaktabel.component';
 import { ViewVakkenPageComponent } from './view-vakken-page/view-vakken-page.component'
 import { DocenttabelComponent } from './components/docenttabel/docenttabel.component';
@@ -24,6 +26,8 @@ import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-v
     HomepageComponent,
     LeerlingTabelComponent,
     ViewLeerlingenPageComponent,
+    KlastabelComponent,
+    ViewKlassenPageComponent,
     VaktabelComponent,
     ViewVakkenPageComponent,
     DocenttabelComponent,
