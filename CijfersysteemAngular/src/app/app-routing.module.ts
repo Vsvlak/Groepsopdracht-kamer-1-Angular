@@ -6,6 +6,8 @@ import { ViewKlassenPageComponent } from './view-klassen-page/view-klassen-page.
 import { ViewVakkenPageComponent } from './view-vakken-page/view-vakken-page.component';
 import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
 import { ViewDocentVakPageComponent} from './view-docent-vak-page/view-docent-vak-page.component';
+import { ViewToetsenPageComponent} from './view-toetsen-page/view-toetsen-page.component';
+
 
 const routes: Routes = [
   {path: "", component: HomepageComponent, pathMatch: "full"},
@@ -13,7 +15,8 @@ const routes: Routes = [
   {path: 'klassen', component: ViewKlassenPageComponent},
   {path: 'vakken', component: ViewVakkenPageComponent},
   {path: 'docenten', component: ViewDocentenPageComponent},
-  {path: 'docent/:id', component: ViewDocentVakPageComponent}
+  {path: 'docent/:id', component: ViewDocentVakPageComponent},
+  {path: 'toetsen', component: ViewToetsenPageComponent}
 ];
 
 @NgModule({
