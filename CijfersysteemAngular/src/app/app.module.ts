@@ -8,7 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LeerlingTabelComponent } from './components/leerlingtabel/leerlingtabel.component';
 import { HttpClientModule} from '@angular/common/http';
-import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlingen-page.component'
+import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlingen-page.component';
+import { KlastabelComponent } from './components/klastabel/klastabel.component';
+import { ViewKlassenPageComponent } from './view-klassen-page/view-klassen-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlin
     FooterComponent,
     HomepageComponent,
     LeerlingTabelComponent,
-    ViewLeerlingenPageComponent
+    ViewLeerlingenPageComponent,
+    KlastabelComponent,
+    ViewKlassenPageComponent
   ],
   imports: [
     BrowserModule,
