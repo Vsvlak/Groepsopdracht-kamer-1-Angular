@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LeerlingService } from '../../Service/leerling.service';
+import { LeerlingService } from '../../service/leerling.service';
 import { LeerlingDto } from '../../models/LeerlingDto';
 
 @Component({
