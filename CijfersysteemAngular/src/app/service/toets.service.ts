@@ -13,4 +13,8 @@ export class ToetsService {
   findToetsen(): Observable<ToetsDto[]> {
     return this.http.get<ToetsDto[]>("http://localhost:8082/toetsOverzicht");
   }
+
+  findToetsenVanVakken(vakid: number): Observable<ToetsDto[]> {
+    return this.http.get<ToetsDto[]>("http://localhost:8082/toonToetsenVanVak/" + vakid);
+  }
 }

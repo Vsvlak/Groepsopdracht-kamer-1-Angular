@@ -17,7 +17,9 @@ import { DocenttabelComponent } from './components/docenttabel/docenttabel.compo
 import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
 import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component';
 import { ToetsTabelComponent } from './components/toets-tabel/toets-tabel.component';
-import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.component'
+import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.component';
+import { ViewToetsenVanVakPageComponent } from './view-toetsen-van-vak-page/view-toetsen-van-vak-page.component';
+import { ToetsVanVakTabelComponent } from './components/toets-van-vak-tabel/toets-van-vak-tabel.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.
     ViewDocentenPageComponent,
     ViewDocentVakPageComponent,
     ToetsTabelComponent,
-    ViewToetsenPageComponent
+    ViewToetsenPageComponent,
+    ViewToetsenVanVakPageComponent,
+    ToetsVanVakTabelComponent
   ],
   imports: [
     BrowserModule,
