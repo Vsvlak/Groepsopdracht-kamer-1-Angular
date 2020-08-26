@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToetsService } from '../../service/toets.service';
+import { ToetsDto } from '../../models/ToetsDto';
 
 @Component({
   selector: 'app-toets-tabel',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToetsTabelComponent implements OnInit {
 
-  constructor() { }
+  toetsen: ToetsDto[];
+
+  constructor(private ts: ToetsService) { }
 
   ngOnInit(): void {
+    this.ts.findToetsen().subscribe( toetsenLijst => {
+      this.toetsen = toetsenLijst;
+    })
   }
 
+  maakTabelLeeg(){
+    this.toetsen = [];
+  }
 }
