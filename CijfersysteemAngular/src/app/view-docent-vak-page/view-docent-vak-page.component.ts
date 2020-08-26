@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DocentDto } from '../models/DocentDto';
 import { DocentService } from '../service/docent.service';
-import { VakDto } from '../models/VakDto';
+import { VakDto } from '../models/vakDto';
 
 @Component({
   selector: 'app-view-docent-vak-page',
@@ -12,7 +12,6 @@ import { VakDto } from '../models/VakDto';
 export class ViewDocentVakPageComponent implements OnInit {
 
   vakken: VakDto[];
-
 
   constructor(private activatedrouter: ActivatedRoute, private docentservice: DocentService) { }
 

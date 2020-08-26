@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { VakDto } from '../models/VakDto';
+import { VakDto } from '../models/vakDto';
 
 @Injectable({
   providedIn: 'root'
