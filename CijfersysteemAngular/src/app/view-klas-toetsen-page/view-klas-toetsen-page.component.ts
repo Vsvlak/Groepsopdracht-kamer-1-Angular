@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { KlasService } from '../service/klas.service';
 import { KlasDto } from '../models/KlasDto';
+import { KlasService } from '../service/klas.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-view-leerlingen-van-klas-page',
-  templateUrl: './view-leerlingen-van-klas-page.component.html',
-  styleUrls: ['./view-leerlingen-van-klas-page.component.css']
+  selector: 'app-view-klas-toetsen-page',
+  templateUrl: './view-klas-toetsen-page.component.html',
+  styleUrls: ['./view-klas-toetsen-page.component.css']
 })
-export class ViewLeerlingenVanKlasPageComponent implements OnInit {
+export class ViewKlasToetsenPageComponent implements OnInit {
 
   klas : KlasDto;
 
@@ -21,5 +21,4 @@ export class ViewLeerlingenVanKlasPageComponent implements OnInit {
       })
     })
   }
-
 }

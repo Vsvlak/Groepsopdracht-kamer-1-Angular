@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <th>ID</th>
+        <th>Datum</th>
+        <th>Tijd</th>
+        <th>Vak</th>
+        <th>Docent</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ToetsDto of toetsen">
+            <td>{{ToetsDto.id}}</td>
+            <td>{{ToetsDto.datum}}</td>
+            <td>{{ToetsDto.tijd}}</td>
+            <td>{{ToetsDto.vak}}</td>
+            <td>{{ToetsDto.docent}}</td>
+        </tr>
+    </tbody>
+</table>
