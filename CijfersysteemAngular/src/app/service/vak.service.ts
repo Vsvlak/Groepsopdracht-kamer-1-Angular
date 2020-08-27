@@ -13,4 +13,8 @@ export class VakService {
   findVakken(): Observable<VakDto[]> {
     return this.http.get<VakDto[]>('http://localhost:8082/vakkenOverzicht')
   }
+
+  findVakkenVanKlas(klasid: Number): Observable<VakDto[]>{
+    return this.http.get<VakDto[]>("http://localhost:8082/vakkenVanKlas/"+ klasid);
+  }
 }

@@ -24,6 +24,8 @@ import { ViewToetsenVanVakPageComponent } from './view-toetsen-van-vak-page/view
 import { ToetsVanVakTabelComponent } from './components/toets-van-vak-tabel/toets-van-vak-tabel.component';
 import { DocentCijferTabelComponent } from './components/docent-cijfer-tabel/docent-cijfer-tabel.component';
 import { ViewCijfersDocentPageComponent } from './view-cijfers-docent-page/view-cijfers-docent-page.component';
+import { KlasVakkenTabelComponent } from './components/klas-vakken-tabel/klas-vakken-tabel.component';
+import { ViewKlasVakkenPageComponent } from './view-klas-vakken-page/view-klas-vakken-page.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { ViewCijfersDocentPageComponent } from './view-cijfers-docent-page/view-
     ViewToetsenVanVakPageComponent,
     ToetsVanVakTabelComponent,
     DocentCijferTabelComponent,
-    ViewCijfersDocentPageComponent
+    ViewCijfersDocentPageComponent,
+    KlasVakkenTabelComponent,
+    ViewKlasVakkenPageComponent
   ],
   imports: [
     BrowserModule,
