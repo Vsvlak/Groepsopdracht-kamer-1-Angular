@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'vakken', component: ViewVakkenPageComponent},
   {path: 'docenten', component: ViewDocentenPageComponent},
   {path: 'docent/:id', component: ViewDocentVakPageComponent},
-  {path: 'leerlingen/:klasid' , component: ViewLeerlingenVanKlasPageComponent},
+  {path: 'klas/:klasid/leerlingen' , component: ViewLeerlingenVanKlasPageComponent},
   {path: 'toetsen', component: ViewToetsenPageComponent},
   {path: 'toetsen/:vakid', component: ViewToetsenVanVakPageComponent},
   {path: 'cijfers/:docentid/:vakid/:klasid', component: ViewCijfersDocentPageComponent},
