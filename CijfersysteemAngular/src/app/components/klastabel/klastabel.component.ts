@@ -24,4 +24,12 @@ export class KlastabelComponent implements OnInit {
   bekijkLeerlingen(k: KlasDto){
     this.router.navigateByUrl('/klas/' + k.id + '/leerlingen');
   }
+
+  bekijkVakken(k: KlasDto){
+    this.router.navigateByUrl('klas/' + k.id + '/vakken');
+  }
+
+  bekijkToetsen(k : KlasDto){
+    this.router.navigateByUrl('klas/' + k.id + '/toetsen');
+  }
 }
