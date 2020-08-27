@@ -8,12 +8,14 @@ import { KlasDto } from '../models/KlasDto';
 })
 export class KlasService {
 
-
-
   constructor(private http: HttpClient) { }
 
 
   findKlassen(): Observable<KlasDto[]> {
     return this.http.get<KlasDto[]>('http://localhost:8082/klassenOverzicht')
+  }
+
+  findKlas(klasid: number): Observable<KlasDto>{
+    return this.http.get<KlasDto>("http://localhost:8082/klas/" + klasid);
   }
 }
