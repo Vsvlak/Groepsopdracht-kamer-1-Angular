@@ -31,6 +31,8 @@ import { ViewKlasPageComponent } from './view-klas-page/view-klas-page.component
 import { ViewDocentKlassenComponent } from './view-docent-klassen/view-docent-klassen.component';
 import { DocentKlassenTabelComponent } from './components/docent-klassen-tabel/docent-klassen-tabel.component';
 import { DocentVakkenTabelComponent } from './components/docent-vakken-tabel/docent-vakken-tabel.component';
+import { DocentVakKlassenTabelComponent } from './components/docent-vak-klassen-tabel/docent-vak-klassen-tabel.component';
+import { ViewDocentVakKlassenPageComponent } from './view-docent-vak-klassen-page/view-docent-vak-klassen-page.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { DocentVakkenTabelComponent } from './components/docent-vakken-tabel/doc
     ViewKlasPageComponent,
     ViewDocentKlassenComponent,
     DocentKlassenTabelComponent,
-    DocentVakkenTabelComponent
+    DocentVakkenTabelComponent,
+    DocentVakKlassenTabelComponent,
+    ViewDocentVakKlassenPageComponent
   ],
   imports: [
     BrowserModule,
