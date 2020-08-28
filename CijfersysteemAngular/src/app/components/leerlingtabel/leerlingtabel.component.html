@@ -11,6 +11,10 @@
             <td>{{leerlingDto.voornaam}}</td>
             <td>{{leerlingDto.achternaam}}</td>
             <td>{{leerlingDto.geboortedatum}}</td>
+            <td>
+                <button class="btn btn-primary" type="button" (click)="bekijkKlas(leerlingDto)">Bekijk klas</button>
+                <!--FITYMI: een leerling kan in meerdere klassen zitten, wij gaan hier uit van 1-->
+            </td>
         </tr>
     </tbody>
 </table>
