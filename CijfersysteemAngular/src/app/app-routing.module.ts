@@ -14,6 +14,7 @@ import { ViewKlasVakkenPageComponent } from './view-klas-vakken-page/view-klas-v
 import { ViewKlasToetsenPageComponent } from './view-klas-toetsen-page/view-klas-toetsen-page.component';
 import { ViewKlasPageComponent } from './view-klas-page/view-klas-page.component';
 import { ViewDocentKlassenComponent } from './view-docent-klassen/view-docent-klassen.component';
+import { ViewDocentVakKlassenPageComponent } from './view-docent-vak-klassen-page/view-docent-vak-klassen-page.component';
 
 const routes: Routes = [
   {path: "", component: HomepageComponent, pathMatch: "full"},
@@ -22,11 +23,12 @@ const routes: Routes = [
   {path: 'vakken', component: ViewVakkenPageComponent},
   {path: 'docenten', component: ViewDocentenPageComponent},
   {path: 'docent/:docentid/vakken', component: ViewDocentVakPageComponent},
+  {path: 'docent/:docentid/vak/:vakid/klassen', component: ViewDocentVakKlassenPageComponent},
   {path: 'docent/:docentid/klassen', component: ViewDocentKlassenComponent},
   {path: 'klas/:klasid/leerlingen' , component: ViewLeerlingenVanKlasPageComponent},
   {path: 'toetsen', component: ViewToetsenPageComponent},
   {path: 'toetsen/:vakid', component: ViewToetsenVanVakPageComponent},
-  {path: 'cijfers/:docentid/:vakid/:klasid', component: ViewCijfersDocentPageComponent},
+  {path: 'docent/:docentid/vak/:vakid/klas/:klasid/cijfers', component: ViewCijfersDocentPageComponent},
   {path: 'klas/:klasid/vakken', component: ViewKlasVakkenPageComponent},
   {path: 'klas/:klasid/toetsen', component: ViewKlasToetsenPageComponent},
   {path: 'klas/:klasid', component: ViewKlasPageComponent}
