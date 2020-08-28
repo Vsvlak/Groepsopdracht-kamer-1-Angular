@@ -28,6 +28,8 @@ import { ViewKlasVakkenPageComponent } from './view-klas-vakken-page/view-klas-v
 import { KlasToetsenTabelComponent } from './components/klas-toetsen-tabel/klas-toetsen-tabel.component';
 import { ViewKlasToetsenPageComponent } from './view-klas-toetsen-page/view-klas-toetsen-page.component';
 import { ViewKlasPageComponent } from './view-klas-page/view-klas-page.component';
+import { ViewDocentKlassenComponent } from './view-docent-klassen/view-docent-klassen.component';
+import { DocentKlassenTabelComponent } from './components/docent-klassen-tabel/docent-klassen-tabel.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { ViewKlasPageComponent } from './view-klas-page/view-klas-page.component
     ViewKlasVakkenPageComponent,
     KlasToetsenTabelComponent,
     ViewKlasToetsenPageComponent,
-    ViewKlasPageComponent
+    ViewKlasPageComponent,
+    ViewDocentKlassenComponent,
+    DocentKlassenTabelComponent
   ],
   imports: [
     BrowserModule,

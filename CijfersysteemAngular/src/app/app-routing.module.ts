@@ -13,6 +13,7 @@ import { ViewCijfersDocentPageComponent } from './view-cijfers-docent-page/view-
 import { ViewKlasVakkenPageComponent } from './view-klas-vakken-page/view-klas-vakken-page.component';
 import { ViewKlasToetsenPageComponent } from './view-klas-toetsen-page/view-klas-toetsen-page.component';
 import { ViewKlasPageComponent } from './view-klas-page/view-klas-page.component';
+import { ViewDocentKlassenComponent } from './view-docent-klassen/view-docent-klassen.component';
 
 const routes: Routes = [
   {path: "", component: HomepageComponent, pathMatch: "full"},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'klassen', component: ViewKlassenPageComponent},
   {path: 'vakken', component: ViewVakkenPageComponent},
   {path: 'docenten', component: ViewDocentenPageComponent},
-  {path: 'docent/:id', component: ViewDocentVakPageComponent},
+  {path: 'docent/:docentid', component: ViewDocentVakPageComponent},
+  {path: 'docent/:docentid/klassen', component: ViewDocentKlassenComponent},
   {path: 'klas/:klasid/leerlingen' , component: ViewLeerlingenVanKlasPageComponent},
   {path: 'toetsen', component: ViewToetsenPageComponent},
   {path: 'toetsen/:vakid', component: ViewToetsenVanVakPageComponent},
