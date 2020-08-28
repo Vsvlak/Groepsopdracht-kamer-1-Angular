@@ -1,0 +1,12 @@
+<table class="table table-striped">
+    <thead>
+        <th>ID</th>
+        <th>Naam</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let VakDto of vakken">
+            <td>{{VakDto.id}}</td>
+            <td>{{VakDto.naam}}</td>
+        </tr>
+    </tbody>
+</table>
