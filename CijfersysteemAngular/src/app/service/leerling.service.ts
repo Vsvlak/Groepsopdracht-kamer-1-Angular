@@ -25,8 +25,8 @@ export class LeerlingService {
   findLeerlingenVanKlas(klasid: number): Observable<LeerlingDto[]> {
     return this.http.get<LeerlingDto[]>("http://localhost:8082/leerlingenInKlas/" + klasid);
   }
-  maakLeerlingAanService(leerling: LeerlingDto): Observable<void> {
-    console.log(leerling.id);
+
+  maakLeerlingAan(leerling: LeerlingDto): Observable<void> {
     console.log(leerling.voornaam);
     console.log(leerling.achternaam);
     console.log(leerling.geboortedatum);

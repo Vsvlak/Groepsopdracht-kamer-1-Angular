@@ -43,10 +43,9 @@ export class LeerlingTabelComponent implements OnInit {
 */
 
   slaLeerlingOp(): void{
-    this.leerling.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
     this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
     this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
-    this.ls.maakLeerlingAanService(this.leerling);
+    this.ls.maakLeerlingAan(this.leerling).subscribe((leerling) => console.log(leerling));
   }
 }
