@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { KlasDto } from '../../models/KlasDto';
 import { KlasService } from '../../service/klas.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-klastabel',
@@ -11,7 +12,7 @@ export class KlastabelComponent implements OnInit {
 
   klassen: KlasDto[];
   
-  constructor(private ks: KlasService) { }
+  constructor(private ks: KlasService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -20,4 +21,7 @@ export class KlastabelComponent implements OnInit {
     });
   }
 
+  bekijkKlas(k: KlasDto){
+    this.router.navigateByUrl('/klas/' + k.id);
+  }
 }

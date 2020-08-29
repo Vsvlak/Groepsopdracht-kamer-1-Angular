@@ -1,5 +1,3 @@
-<p>docenttabel works!</p>
-
 <table class="table table-striped">
     <thead>
         <tr>
@@ -15,7 +13,10 @@
             <td>{{docentDto.voornaam}}</td>
             <td>{{docentDto.achternaam}}</td>
             <td>
-                <button class="btn btn-primary" type= "button" (click)="bekijkDocentVakken(docentDto)">bekijk vak</button>
+                <button class="btn btn-primary" type= "button" (click)="bekijkDocentVakken(docentDto)">Vakken</button>
+            </td>
+            <td>
+                <button class="btn btn-primary" type= "button" (click)="bekijkDocentKlassen(docentDto)">Klassen</button>
             </td>
         </tr>
     </tbody>

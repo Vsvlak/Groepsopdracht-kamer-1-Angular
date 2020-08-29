@@ -2,18 +2,24 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { LeerlingDto } from '../models/LeerlingDto';
+import { KlasDto } from '../models/KlasDto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LeerlingService {
 
-
-
   constructor(private http: HttpClient) { }
 
-
   findLeerlingen(): Observable<LeerlingDto[]> {
-    return this.http.get<LeerlingDto[]>('http://localhost:8082/leerlingOverzicht')
+    return this.http.get<LeerlingDto[]>('http://localhost:8082/leerlingOverzicht');
+  }
+
+  findLeerlingenVanKlas(klasid: number): Observable<LeerlingDto[]> {
+    return this.http.get<LeerlingDto[]>("http://localhost:8082/leerlingenInKlas/" + klasid);
+  }
+
+  findKlassenVanLeerling(leerlingid: number): Observable<KlasDto[]>{
+    return this.http.get<KlasDto[]>("http://localhost:8082/klassenVanLeerling/" + leerlingid);
   }
 }
