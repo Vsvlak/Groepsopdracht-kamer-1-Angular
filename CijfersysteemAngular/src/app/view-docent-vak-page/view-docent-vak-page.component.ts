@@ -17,7 +17,7 @@ export class ViewDocentVakPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedrouter.paramMap.subscribe(params => {
-      this.docentservice.findDocentVakken(Number.parseInt(params.get("id"))).subscribe(docentVakken => {
+      this.docentservice.findDocentVakken(Number.parseInt(params.get("docentid"))).subscribe(docentVakken => {
         this.vakken = docentVakken;
       });
 

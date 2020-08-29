@@ -9,11 +9,18 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LeerlingTabelComponent } from './components/leerlingtabel/leerlingtabel.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ViewLeerlingenPageComponent } from './view-leerlingen-page/view-leerlingen-page.component';
+import { KlastabelComponent } from './components/klastabel/klastabel.component';
+import { ViewKlassenPageComponent } from './view-klassen-page/view-klassen-page.component';
 import { VaktabelComponent } from './components/vaktabel/vaktabel.component';
 import { ViewVakkenPageComponent } from './view-vakken-page/view-vakken-page.component'
 import { DocenttabelComponent } from './components/docenttabel/docenttabel.component';
 import { ViewDocentenPageComponent } from './view-docenten-page/view-docenten-page.component';
-import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component'
+import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-vak-page.component';
+import { ToetsTabelComponent } from './components/toets-tabel/toets-tabel.component';
+import { ViewToetsenPageComponent } from './view-toetsen-page/view-toetsen-page.component';
+import { ViewToetsenVanVakPageComponent } from './view-toetsen-van-vak-page/view-toetsen-van-vak-page.component';
+import { ToetsVanVakTabelComponent } from './components/toets-van-vak-tabel/toets-van-vak-tabel.component';
+import { DocentvaktabelComponent } from './components/docentvaktabel/docentvaktabel.component';
 
 @NgModule({
   declarations: [
@@ -24,17 +31,25 @@ import { ViewDocentVakPageComponent } from './view-docent-vak-page/view-docent-v
     HomepageComponent,
     LeerlingTabelComponent,
     ViewLeerlingenPageComponent,
+    KlastabelComponent,
+    ViewKlassenPageComponent,
     VaktabelComponent,
     ViewVakkenPageComponent,
     DocenttabelComponent,
     ViewDocentenPageComponent,
-    ViewDocentVakPageComponent
+    DocentvaktabelComponent,
+    ViewDocentVakPageComponent,
+    ToetsTabelComponent,
+    ViewToetsenPageComponent,
+    ViewToetsenVanVakPageComponent,
+    ToetsVanVakTabelComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

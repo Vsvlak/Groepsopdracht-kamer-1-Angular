@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewVakkenPageComponent } from './view-vakken-page.component';
+import { ViewKlassenPageComponent } from './view-klassen-page.component';
 
-describe('ViewVakkenPageComponent', () => {
-  let component: ViewVakkenPageComponent;
-  let fixture: ComponentFixture<ViewVakkenPageComponent>;
+describe('ViewKlassenPageComponent', () => {
+  let component: ViewKlassenPageComponent;
+  let fixture: ComponentFixture<ViewKlassenPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewVakkenPageComponent ]
+      declarations: [ ViewKlassenPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewVakkenPageComponent);
+    fixture = TestBed.createComponent(ViewKlassenPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

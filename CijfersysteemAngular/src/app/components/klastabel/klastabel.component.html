@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Klasnummer</th>
+            <th>Naam</th>
+            <th>Niveau</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let klasDto of klassen">
+            <td>{{klasDto.id}}</td>
+            <td>{{klasDto.naam}}</td>
+            <td>{{klasDto.niveau}}</td>
+        </tr>
+    </tbody>
+</table>

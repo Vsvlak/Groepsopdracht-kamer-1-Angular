@@ -16,11 +16,11 @@ export class DocentService {
 
 
   findDocenten(): Observable<DocentDto[]> {
-    return this.http.get<DocentDto[]>('http://localhost:8082/docentOverzicht')
+    return this.http.get<DocentDto[]>('http://localhost:8082/docentOverzicht');
   }
   
-  findDocentVakken(docentid: number): Observable<VakDto[]> {
-    return this.http.get<VakDto[]>('http://localhost:8082/vakkenVanDocent/'+ docentid)
+  findDocentVakken(vakid: number): Observable<VakDto[]> {
+    return this.http.get<VakDto[]>('http://localhost:8082/vakkenVanDocent/'+ vakid);
 
   }
 }

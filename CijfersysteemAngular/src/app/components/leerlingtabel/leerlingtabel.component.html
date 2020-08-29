@@ -1,6 +1,16 @@
 <table class="table table-striped">
-    <tr *ngFor="let leerlingDto of leerlingen">
-        <td>{{leerlingDto.id}}</td>
-        <td>{{leerlingDto.voornaam}}</td>
-    </tr>
+    <thead>
+        <th>Studentnummer</th>
+        <th>Voornaam</th>
+        <th>Achternaam</th>
+        <th>Geboortedatum</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leerlingDto of leerlingen">
+            <td>{{leerlingDto.id}}</td>
+            <td>{{leerlingDto.voornaam}}</td>
+            <td>{{leerlingDto.achternaam}}</td>
+            <td>{{leerlingDto.geboortedatum}}</td>
+        </tr>
+    </tbody>
 </table>

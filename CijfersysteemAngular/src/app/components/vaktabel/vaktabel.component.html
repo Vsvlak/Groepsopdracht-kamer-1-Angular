@@ -7,6 +7,9 @@
         <tr *ngFor="let vakDto of vakken">
             <td>{{vakDto.id}}</td>
             <td>{{vakDto.naam}}</td>
+            <td>
+                <button class="btn btn-primary" type="button" (click)="bekijkToetsenVanVak(vakDto)">Bekijk toetsen</button>
+            </td>
         </tr>
     </tbody>
 </table>
