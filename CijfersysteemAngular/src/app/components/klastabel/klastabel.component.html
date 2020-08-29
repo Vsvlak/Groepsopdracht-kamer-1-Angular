@@ -12,8 +12,16 @@
             <td>{{klasDto.naam}}</td>
             <td>{{klasDto.niveau}}</td>
             <td>
-                <button class="btn btn-primary" type="button" (click)="bekijkKlas(klasDto)">Bekijk klas</button>
+                <button class="btn btn-primary" type="button" (click)="bekijkLeerlingen(klasDto)">Leerlingen</button>
+            </td>
+            <td>
+                <button class="btn btn-primary" type="button" (click)="bekijkVakken(klasDto)">Vakken</button>
+            </td>
+            <td>
+                <button class="btn btn-primary" type="button" (click)="bekijkToetsen(klasDto)">Toetsen</button>
             </td>
         </tr>
     </tbody>
 </table>
+
+

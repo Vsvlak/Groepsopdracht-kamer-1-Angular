@@ -27,10 +27,9 @@ export class DocenttabelComponent implements OnInit {
   }
 
   bekijkDocentVakken(d: DocentDto){ 
-     this.router.navigateByUrl('/docent/'+ d.id + '/vakken');
+ 
+
+    this.router.navigateByUrl('/docent/'+ d.id);
+
   }
-  
-  bekijkDocentKlassen(d: DocentDto){ 
-    this.router.navigateByUrl('/docent/'+ d.id + '/klassen');
- }
 }
