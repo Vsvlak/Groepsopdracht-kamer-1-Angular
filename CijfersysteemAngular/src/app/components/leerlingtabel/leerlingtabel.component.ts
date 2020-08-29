@@ -12,7 +12,13 @@ import { LeerlingDto } from '../../models/LeerlingDto';
 export class LeerlingTabelComponent implements OnInit {
 
   leerlingen: LeerlingDto[];
-  leerling: LeerlingDto;
+  leerling: LeerlingDto = {
+    voornaam : undefined,
+    achternaam : undefined,
+    geboortedatum : undefined,
+    id : undefined
+  }
+
   tempsIds : number[];
 
   constructor(private ls: LeerlingService) { }
@@ -36,12 +42,11 @@ export class LeerlingTabelComponent implements OnInit {
   }
 */
 
-slaLeerlingOp(){
-  this.leerling.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
-  this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
-  this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
-  this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
-  
-  this.ls.maakLeerlingAanService(this.leerling);
-}
+  slaLeerlingOp(): void{
+    this.leerling.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
+    this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
+    this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
+    this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
+    this.ls.maakLeerlingAanService(this.leerling);
+  }
 }
