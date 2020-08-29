@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { DocentDto } from '../models/DocentDto';
 import { DocentService } from '../service/docent.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-view-docent-vak-page',
-  templateUrl: './view-docent-vak-page.component.html',
-  styleUrls: ['./view-docent-vak-page.component.css']
+  selector: 'app-view-docent-klassen',
+  templateUrl: './view-docent-klassen.component.html',
+  styleUrls: ['./view-docent-klassen.component.css']
 })
-export class ViewDocentVakPageComponent implements OnInit {
+export class ViewDocentKlassenComponent implements OnInit {
 
   docent: DocentDto;
 
