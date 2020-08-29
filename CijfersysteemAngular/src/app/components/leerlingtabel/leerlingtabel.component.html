@@ -6,11 +6,40 @@
         <th>Geboortedatum</th>
     </thead>
     <tbody>
-        <tr *ngFor="let leerlingDto of leerlingen">
+        <tr data-toggle="modal" data-target="#exampleModalCenter" *ngFor="let leerlingDto of leerlingen">
             <td>{{leerlingDto.id}}</td>
             <td>{{leerlingDto.voornaam}}</td>
             <td>{{leerlingDto.achternaam}}</td>
             <td>{{leerlingDto.geboortedatum}}</td>
         </tr>
+        <tr>
+            <td>
+                <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
+            </td>
+            <td></td><td></td><td></td>
+        </tr>
     </tbody>
 </table>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-text"> Voornaam <input type="text" id="voornaamInput"></div>
+            <div class="modal-text"> Achternaam <input type="text" id="achternaamInput"></div>
+            <div class="modal-text"> Geboortedatum DD/MM/YYYY<input type="text" id="geboortedatumInput"></div>
+            <div class="modal-text"> Leerlingnummer <input type="text" id="leerlingnrInput"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="slaLeerlingOp()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

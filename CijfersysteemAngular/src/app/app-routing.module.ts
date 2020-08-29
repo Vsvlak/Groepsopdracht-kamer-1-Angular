@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'toetsen/:vakid', component: ViewToetsenVanVakPageComponent},
   {path: 'cijfers/:docentid/:vakid/:klasid', component: ViewCijfersDocentPageComponent},
   {path: 'klas/:klasid/vakken', component: ViewKlasVakkenPageComponent},
-  {path: 'klas/:klasid/toetsen', component: ViewKlasToetsenPageComponent}
+  {path: 'klas/:klasid/toetsen', component: ViewKlasToetsenPageComponent},
 ];
 
 @NgModule({

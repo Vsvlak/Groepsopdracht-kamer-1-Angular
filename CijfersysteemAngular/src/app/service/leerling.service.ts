@@ -20,4 +20,7 @@ export class LeerlingService {
   findLeerlingenVanKlas(klasid: number): Observable<LeerlingDto[]> {
     return this.http.get<LeerlingDto[]>("http://localhost:8082/leerlingenInKlas/" + klasid);
   }
+  maakLeerlingAanService(leerlingDto: LeerlingDto): Observable<void> {
+    return this.http.post<void>('http:///localhost:8082/api/maakLeerling', leerlingDto)
+  }
 }

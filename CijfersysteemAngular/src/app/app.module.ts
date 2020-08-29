@@ -56,7 +56,7 @@ import { ViewKlasToetsenPageComponent } from './view-klas-toetsen-page/view-klas
     KlasVakkenTabelComponent,
     ViewKlasVakkenPageComponent,
     KlasToetsenTabelComponent,
-    ViewKlasToetsenPageComponent
+    ViewKlasToetsenPageComponent,
   ],
   imports: [
     BrowserModule,
