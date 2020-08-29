@@ -21,5 +21,4 @@ export class DocentCijferTabelComponent implements OnInit {
       })
     })
   }
-
 }
