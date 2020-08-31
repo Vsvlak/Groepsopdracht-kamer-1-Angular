@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VakService } from '../../service/vak.service';
-import { VakDto } from '../../models/vakDto';
+import { VakDto } from '../../models/VakDto';
 import { Router } from '@angular/router';
 
 @Component({
