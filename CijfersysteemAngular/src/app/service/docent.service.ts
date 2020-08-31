@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DocentDto } from '../models/DocentDto';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +15,13 @@ export class DocentService {
 
 
   findDocenten(): Observable<DocentDto[]> {
-    return this.http.get<DocentDto[]>('http://localhost:8082/docentOverzicht')
+    return this.http.get<DocentDto[]>(`${environment.apiURL}/docentOverzicht`)
   }
 
   maakDocentAan(docent: DocentDto): Observable<any> {
     console.log(docent.voornaam);
     console.log(docent.achternaam);
     // console.log(docent.id);
-    return this.http.post<any>('http://localhost:8082/api/maakDocent', docent);
+    return this.http.post<any>(`${environment.apiURL}/api/maakDocent`, docent);
   }
 }
