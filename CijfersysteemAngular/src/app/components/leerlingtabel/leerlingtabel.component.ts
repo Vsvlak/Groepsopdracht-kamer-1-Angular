@@ -19,7 +19,7 @@ export class LeerlingTabelComponent implements OnInit {
     id : undefined
   }
 
-  tempsIds : number[];
+  // tempsIds : number[]; voor editten later
 
   constructor(private ls: LeerlingService) { }
 
@@ -35,6 +35,12 @@ export class LeerlingTabelComponent implements OnInit {
   maakTabelLeeg(){
     this.leerlingen = [];
   }
+  refreshTabel(){ 
+    this.ls.findLeerlingen().subscribe( lijstVanLeerlingen =>{
+      this.leerlingen = lijstVanLeerlingen;
+    })
+  }
+
 /*
   saveIds(clickedLeerling : LeerlingService){
     this.tempIds = [];
@@ -43,10 +49,11 @@ export class LeerlingTabelComponent implements OnInit {
 */
 
   slaLeerlingOp(): void{
-    this.leerling.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
+    // this.leerling.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
     this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
     this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
-    this.ls.maakLeerlingAan(this.leerling);
+    this.ls.maakLeerlingAan(this.leerling).subscribe( (leerling) => console.log(leerling));
+    this.refreshTabel();
   }
 }

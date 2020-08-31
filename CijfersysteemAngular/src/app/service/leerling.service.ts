@@ -26,11 +26,12 @@ export class LeerlingService {
     return this.http.get<LeerlingDto[]>("http://localhost:8082/leerlingenInKlas/" + klasid);
   }
 
-  maakLeerlingAan(leerling: LeerlingDto): Observable<void> {
-    console.log(leerling.id);
+  maakLeerlingAan(leerling: LeerlingDto): Observable<any> {
     console.log(leerling.voornaam);
     console.log(leerling.achternaam);
     console.log(leerling.geboortedatum);
-    return this.http.post<void>('http://localhost:8082/api/maakLeerling', 15);
+    return this.http.post<any>('http://localhost:8082/api/maakLeerling', leerling);
+   
   }
+
 }

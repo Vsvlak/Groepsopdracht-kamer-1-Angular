@@ -16,4 +16,11 @@ export class DocentService {
   findDocenten(): Observable<DocentDto[]> {
     return this.http.get<DocentDto[]>('http://localhost:8082/docentOverzicht')
   }
+
+  maakDocentAan(docent: DocentDto): Observable<any> {
+    console.log(docent.voornaam);
+    console.log(docent.achternaam);
+    // console.log(docent.id);
+    return this.http.post<any>('http://localhost:8082/api/maakDocent', docent);
+  }
 }

@@ -11,6 +11,12 @@ import { Router } from '@angular/router';
 export class KlastabelComponent implements OnInit {
 
   klassen: KlasDto[];
+  klas: KlasDto = {
+    naam : undefined,
+    niveau: undefined,
+    id : undefined
+  }
+
   
   constructor(private ks: KlasService, private router: Router) { }
 
@@ -32,4 +38,11 @@ export class KlastabelComponent implements OnInit {
   bekijkToetsen(k : KlasDto){
     this.router.navigateByUrl('klas/' + k.id + '/toetsen');
   }
+
+  slaKlasOp(): void{
+    this.klas.naam = (<HTMLInputElement>document.getElementById("naamInput")).value;
+    this.klas.niveau = (<HTMLInputElement>document.getElementById("niveauInput")).value;
+    this.ks.maakKlasAan(this.klas).subscribe( (klas) => console.log(klas));
+  }
+
 }
