@@ -40,22 +40,17 @@ ks: KlasService;
       });
   }
 
-  voegLeerlingToe(){ 
+  /*voegLeerlingToe(){ 
    var NieuweLeerlingInKlas = (<HTMLInputElement> document.getElementById('kiesleerling')).value;
    var idNieuweLeerlingInKlas =  NieuweLeerlingInKlas.split(".")[0];
    for(var i=0; i<this.leerlingenDrop.length; i++){
      if (this.leerlingenDrop[i].id == parseInt(idNieuweLeerlingInKlas)){
         this.leerling = this.leerlingenDrop[i];      
-        this.ks.voegLeerlingToeService(this.leerling).subscribe((leerling) => 
+        this.ks.voegLeerlingToeService(leerling)).subscribe((leerling) => 
         alert(leerling));
      }
    }
    
-
-
-
-
-   // this.ks.voegLeerlingToe2(idNieuweLeerlingInKlas);
-  }
+  }*/
 
 } 
