@@ -28,29 +28,28 @@ ks: KlasService;
       });
     })
 
-    // this.maakLeerlingenDropdown();
-
   }
 
 
   maakLeerlingenDropdown(){ 
-    console.log("ik ben hier");
-    // this.activatedrouter.paramMap.subscribe(params =>{
       this.ls.findLeerlingen().subscribe(leerlingenlijst2 => {
         this.leerlingenDrop = leerlingenlijst2;
         for (let i = 0 ; i < leerlingenlijst2.length; i++){ 
           document.getElementById("kiesleerling").innerHTML += "<option>" + leerlingenlijst2[i].id + ". " + leerlingenlijst2[i].voornaam + " " + leerlingenlijst2[i].achternaam + "</option>";
-          // }
-          // let v = (<HTMLInputElement> document.getElementById('kiesleerling')).value;
         }
       });
-    // })
   }
 
-  voegLeerlingToe1(){ 
+  voegLeerlingToe(){ 
    var NieuweLeerlingInKlas = (<HTMLInputElement> document.getElementById('kiesleerling')).value;
    var idNieuweLeerlingInKlas =  NieuweLeerlingInKlas.split(".")[0];
-   console.log(this.leerlingen.length);
+   for(var i=0; i<this.leerlingenDrop.length; i++){
+     if (this.leerlingenDrop[i].id == parseInt(idNieuweLeerlingInKlas)){
+        this.leerling = this.leerlingenDrop[i];      
+        this.ks.voegLeerlingToeService(this.leerling).subscribe((leerling) => 
+        alert(leerling));
+     }
+   }
    
 
 

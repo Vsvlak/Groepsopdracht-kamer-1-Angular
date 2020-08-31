@@ -22,15 +22,13 @@ export class KlasService {
 
   
   maakKlasAan(klas: KlasDto): Observable<any> {
-    console.log(klas.naam);
-    console.log(klas.niveau);
     return this.http.post<any>('http://localhost:8082/api/maakKlas', klas);
   }
 
 
 
-  voegLeerlingToe2(leerling:LeerlingDto): Observable<any>{
-  return this.http.post<any>('http://localhost:8082/api/voegLeerlingToe', leerling.id);
-}
+  voegLeerlingToeService(leerling: LeerlingDto): Observable<void>{
+    return this.http.post<void>('http://localhost:8082/api/voegLeerlingToe', leerling);
+  }
 }
 // /api/voegLeerlingToe
