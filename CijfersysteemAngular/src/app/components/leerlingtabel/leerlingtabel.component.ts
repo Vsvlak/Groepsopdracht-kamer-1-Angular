@@ -34,22 +34,15 @@ export class LeerlingTabelComponent implements OnInit {
     });
   }
 
-  maakTabelLeeg(){
-    this.leerlingen = [];
-  }
-/*
-  saveIds(clickedLeerling : LeerlingService){
-    this.tempIds = [];
-    this.tempIds.push(clickedLeerling.)
-  }
-*/
 
   slaLeerlingOp(): void{
     this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
     this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
     this.ls.maakLeerlingAan(this.leerling).subscribe((leerling) => console.log(leerling));
-
+    window.location.reload();
+  }
+  
   bekijkKlas(l : LeerlingDto){
     this.ls.findKlassenVanLeerling(l.id).subscribe(klassenlijst =>{
       this.klassen = klassenlijst;

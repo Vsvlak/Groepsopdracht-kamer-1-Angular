@@ -23,7 +23,16 @@ leerlingen: LeerlingDto[];
       });
     })
 
+    this.maakDD();
 
+  }
+  maakDD(){
+    console.log("ik ben hier");
+      const leerlingenLijst = this.ls.findLeerlingen().subscribe(leerlingenlijst => {
+        for (let i = 0 ; i < leerlingenlijst.length; i++){ 
+          document.getElementById("maakDD").innerHTML += "<option value = val"+i+ ">" + leerlingenlijst[i].id + ". " + leerlingenlijst[i].voornaam + " " + leerlingenlijst[i].achternaam + "</option>";
+        }
+      });
   }
 
 }

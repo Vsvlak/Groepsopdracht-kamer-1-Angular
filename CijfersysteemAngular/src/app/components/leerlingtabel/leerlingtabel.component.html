@@ -6,7 +6,7 @@
         <th>Geboortedatum</th>
     </thead>
     <tbody>
-        <tr data-toggle="modal" data-target="#exampleModalCenter" *ngFor="let leerlingDto of leerlingen">
+        <tr *ngFor="let leerlingDto of leerlingen">
             <td>{{leerlingDto.id}}</td>
             <td>{{leerlingDto.voornaam}}</td>
             <td>{{leerlingDto.achternaam}}</td>
@@ -20,7 +20,7 @@
             <td>
                 <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
             </td>
-            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
         </tr>
     </tbody>
 </table>
