@@ -12,6 +12,11 @@ export class DocenttabelComponent implements OnInit {
 
  
   docenten: DocentDto[];
+  docent: DocentDto = {
+    voornaam : undefined,
+    achternaam : undefined,
+    id : undefined
+  }
 
   constructor(private ds: DocentService, private router: Router) { }
 
@@ -27,10 +32,13 @@ export class DocenttabelComponent implements OnInit {
   }
 
   bekijkDocentVakken(d: DocentDto){ 
-     this.router.navigateByUrl('/docent/'+ d.id + '/vakken');
+    this.router.navigateByUrl('/docent/'+ d.id);
+
   }
-  
-  bekijkDocentKlassen(d: DocentDto){ 
-    this.router.navigateByUrl('/docent/'+ d.id + '/klassen');
- }
+  slaDocentOp(): void{
+    // this.docent.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
+    this.docent.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
+    this.docent.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
+    this.ds.maakDocentAan(this.docent).subscribe( (docent) => console.log(docent));
+  }
 }
