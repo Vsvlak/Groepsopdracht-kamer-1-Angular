@@ -13,11 +13,6 @@ import { LeerlingDto } from '../../models/LeerlingDto';
 export class LeerlingTabelComponent implements OnInit {
 
   leerlingen: LeerlingDto[];
-<<<<<<< HEAD
-
-  
-=======
->>>>>>> featureRana
   leerling: LeerlingDto = {
     voornaam : undefined,
     achternaam : undefined,
@@ -25,12 +20,7 @@ export class LeerlingTabelComponent implements OnInit {
     id : undefined
   }
 
-<<<<<<< HEAD
-  tempsIds : number[];
-  klassen: KlasDto[];
-=======
   // tempsIds : number[]; voor editten later
->>>>>>> featureRana
 
   constructor(private ls: LeerlingService) { }
 
@@ -43,28 +33,12 @@ export class LeerlingTabelComponent implements OnInit {
 
   }
 
-<<<<<<< HEAD
-
-  slaLeerlingOp(): void{
-    this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
-    this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
-    this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
-    this.ls.maakLeerlingAan(this.leerling).subscribe((leerling) => console.log(leerling));
-    window.location.reload();
-  }
-  
-  bekijkKlas(l : LeerlingDto){
-    this.ls.findKlassenVanLeerling(l.id).subscribe(klassenlijst =>{
-      this.klassen = klassenlijst;
-      this.router.navigateByUrl('/klas/' + this.klassen[0].id);
-=======
   maakTabelLeeg(){
     this.leerlingen = [];
   }
   refreshTabel(){ 
     this.ls.findLeerlingen().subscribe( lijstVanLeerlingen =>{
       this.leerlingen = lijstVanLeerlingen;
->>>>>>> featureRana
     })
   }
 
@@ -81,6 +55,5 @@ export class LeerlingTabelComponent implements OnInit {
     this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
     this.ls.maakLeerlingAan(this.leerling).subscribe( (leerling) => console.log(leerling));
-    this.refreshTabel();
   }
 }

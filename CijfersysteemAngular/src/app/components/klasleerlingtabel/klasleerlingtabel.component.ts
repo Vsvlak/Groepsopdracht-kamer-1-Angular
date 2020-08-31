@@ -28,21 +28,10 @@ ks: KlasService;
       });
     })
 
-<<<<<<< HEAD
-    this.maakDD();
-=======
     // this.maakLeerlingenDropdown();
->>>>>>> featureRana
 
   }
-  maakDD(){
-    console.log("ik ben hier");
-      const leerlingenLijst = this.ls.findLeerlingen().subscribe(leerlingenlijst => {
-        for (let i = 0 ; i < leerlingenlijst.length; i++){ 
-          document.getElementById("maakDD").innerHTML += "<option value = val"+i+ ">" + leerlingenlijst[i].id + ". " + leerlingenlijst[i].voornaam + " " + leerlingenlijst[i].achternaam + "</option>";
-        }
-      });
-  }
+
 
   maakLeerlingenDropdown(){ 
     console.log("ik ben hier");
@@ -61,9 +50,8 @@ ks: KlasService;
   voegLeerlingToe1(){ 
    var NieuweLeerlingInKlas = (<HTMLInputElement> document.getElementById('kiesleerling')).value;
    var idNieuweLeerlingInKlas =  NieuweLeerlingInKlas.split(".")[0];
-   console.log(NieuweLeerlingInKlas + " eerste ");
-   console.log(this.leerlingen.length + " " + idNieuweLeerlingInKlas);
-   idNieuweLeerlingInKlas
+   console.log(this.leerlingen.length);
+   
 
 
 
