@@ -56,7 +56,7 @@ export class LeerlingTabelComponent implements OnInit {
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
     this.ls.maakLeerlingAan(this.leerling).subscribe((leerling) => console.log(leerling));
   }
-  
+
   bekijkKlas(l : LeerlingDto){
     this.ls.findKlassenVanLeerling(l.id).subscribe(klassenlijst =>{
       this.klassen = klassenlijst;
