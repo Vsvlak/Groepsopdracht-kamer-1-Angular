@@ -11,16 +11,18 @@
             <td>{{leerlingDto.voornaam}}</td>
             <td>{{leerlingDto.achternaam}}</td>
             <td>{{leerlingDto.geboortedatum}}</td>
-            <td>
-                <button class="btn btn-primary" type="button" (click)="bekijkKlas(leerlingDto)">Bekijk klas</button>
-                <!--FITYMI: een leerling kan in meerdere klassen zitten, wij gaan hier uit van 1-->
-            </td>
         </tr>
         <tr>
             <td>
                 <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
             </td>
             <td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
+            </td>
+            <td></td><td></td><td></td><td></td>
         </tr>
     </tbody>
 </table>
@@ -41,7 +43,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
-          <button type="button" class="btn btn-primary" (click)="slaLeerlingOp()">Opslaan</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="slaLeerlingOp()">Opslaan</button>
         </div>
       </div>
     </div>
