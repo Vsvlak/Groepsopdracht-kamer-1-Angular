@@ -23,4 +23,8 @@ export class VakService {
   findVak(vakid: number): Observable<VakDto>{
     return this.http.get<VakDto>("http://localhost:8082/vak/" + vakid);
   }
+
+  maakVakAan(vak: VakDto): Observable<any> {
+    return this.http.post<any>(`${environment.apiURL}/api/maakVak`, vak);
+  }
 }
