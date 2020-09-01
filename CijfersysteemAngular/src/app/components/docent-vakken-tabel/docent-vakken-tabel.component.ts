@@ -16,11 +16,11 @@ export class DocentVakkenTabelComponent implements OnInit {
   constructor(private ds: DocentService, private router: Router, private activatedrouter: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.activatedrouter.paramMap.subscribe(params => {
-    //   this.ds.findVakkenVanDocent(Number.parseInt(params.get("docentid"))).subscribe(vakkenlijst => {
-    //     this.vakken = vakkenlijst;
-    //   })
-    // })
+    this.activatedrouter.paramMap.subscribe(params => {
+      this.ds.findVakkenVanDocent(Number.parseInt(params.get("docentid"))).subscribe(vakkenlijst => {
+        this.vakken = vakkenlijst;
+      })
+    })
   }
 
   bekijkKlassen(v: VakDto) {
