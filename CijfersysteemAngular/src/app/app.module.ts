@@ -34,6 +34,13 @@ import { ViewDocentVakKlassenPageComponent } from './view-docent-vak-klassen-pag
 import { DocentKlassenTabelComponent } from './components/docent-klassen-tabel/docent-klassen-tabel.component';
 import { ViewDocentKlassenComponent } from './view-docent-klassen/view-docent-klassen.component';
 import { DocentVakkenTabelComponent } from './components/docent-vakken-tabel/docent-vakken-tabel.component';
+import { FormsModule} from '@angular/forms';
+import { CijferService } from './service/cijfer.service';
+import { DocentService } from './service/docent.service';
+import { KlasService } from './service/klas.service';
+import { LeerlingService } from './service/leerling.service';
+import { ToetsService } from './service/toets.service';
+import { VakService } from './service/vak.service';
 
 @NgModule({
   declarations: [
@@ -73,9 +80,17 @@ import { DocentVakkenTabelComponent } from './components/docent-vakken-tabel/doc
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    CijferService,
+    DocentService,
+    KlasService,
+    LeerlingService,
+    ToetsService,
+    VakService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
