@@ -4,7 +4,15 @@
     right: 0;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
-    color: white;
+    background-color:brown;
+    color: rgb(219, 108, 108);
     font-weight: 600;
+  }
+
+  .image{ 
+    height: 100;
+  }
+  .homebutton{ 
+   max-height: 20px;
+   max-width: 20px;
   }
