@@ -2,8 +2,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
 import { LeerlingService } from '../../service/leerling.service';
 import { LeerlingDto } from '../../models/LeerlingDto';
 import { KlasDto } from 'src/app/models/KlasDto';
-import { ActivatedRoute, Router } from '@angular/router'
-
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -21,12 +20,12 @@ export class LeerlingTabelComponent implements OnInit {
     geboortedatum : undefined,
     id : undefined
   }
-  klassen: KlasDto[]
+  klassen: KlasDto[];
 
   // tempsIds : number[]; voor editten later
 
   constructor(private ls: LeerlingService, private router: Router) { }
-
+  
   ngOnInit(): void {
 
     this.ls.findLeerlingen().subscribe( lijstVanLeerlingen => {
