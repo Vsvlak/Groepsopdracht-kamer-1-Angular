@@ -21,25 +21,15 @@ export class DocentvaktabelComponent implements OnInit {
   constructor(private ds: DocentService, private vs: VakService, private activatedrouter: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.ds.findDocenten().subscribe( lijstVanDocenten => {
-    //   this.docenten = lijstVanDocenten;
-    // });
-
-    // this.vs.findVakken().subscribe( lijstVanVakken => {
-    //   this.vakken = lijstVanVakken;
-    // });
-
-    /*this.activatedrouter.paramMap.subscribe(params =>{ 
-      this.ds.findDocentVakken(Number.parseInt(params.get("docentid"))).subscribe(docentVakkenlijst => {
-        this.docenten = docentVakkenlijst;
-    });
-  })*/
+    this.activatedrouter.paramMap.subscribe(params =>{
+      this.ds.findVakkenVanDocent(Number.parseInt(params.get("docentid"))).subscribe(vakkenlijst => {
+        this.vakken = vakkenlijst;
+      })
+    })
   }
 
-  maakTabelLeeg(){
+  maakTabelLeeg() {
     this.docenten = [];
     this.vakken = [];
-
   }
-
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DocentDto } from '../models/DocentDto';
+import { DocentService } from '../service/docent.service';
 
 @Component({
   selector: 'app-view-docent-vak-page',
@@ -8,12 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewDocentVakPageComponent implements OnInit {
 
-  constructor(private activatedrouter: ActivatedRoute) { }
+  constructor(private ds: DocentService, private activatedrouter: ActivatedRoute) { }
+
+  docent: DocentDto;
 
   ngOnInit(): void {
     this.activatedrouter.paramMap.subscribe(params => {
-      alert(params.get("id"));
+      this.ds.findDocent(Number.parseInt(params.get("docentid"))).subscribe(docent => {
+        this.docent = docent;
+      })
     })
   }
-
 }
