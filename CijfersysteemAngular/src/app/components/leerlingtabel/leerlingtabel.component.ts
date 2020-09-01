@@ -54,6 +54,13 @@ export class LeerlingTabelComponent implements OnInit {
     this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
     this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
-    this.ls.maakLeerlingAan(this.leerling).subscribe( (leerling) => console.log(leerling));
+    this.ls.maakLeerlingAan(this.leerling).subscribe((leerling) => console.log(leerling));
+  }
+  
+  bekijkKlas(l : LeerlingDto){
+    this.ls.findKlassenVanLeerling(l.id).subscribe(klassenlijst =>{
+      this.klassen = klassenlijst;
+      this.router.navigateByUrl('/klas/' + this.klassen[0].id);
+    })
   }
 }
