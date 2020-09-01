@@ -1,22 +1,13 @@
-<p>docentvaktabel works!</p>
-
 <table class="table table-striped">
     <thead>
-        <tr>
-            <th>id</th>
-            <th>Voornaam</th>
-            <th>Vakken</th>
-        </tr>
+        <th>ID</th>
+        <th>Naam</th>
     </thead>
     <tbody>
-        <tr *ngFor="let docentDto of docenten">
-
-            <td>{{docentDto.id}}</td>
-            <td>{{docentDto.voornaam}}</td>
-            <!-- <td>{{vakDto.naam}}</td> -->
-            
+        <tr *ngFor="let VakDto of vakken">
+            <td>{{VakDto.id}}</td>
+            <td>{{VakDto.naam}}</td>
         </tr>
     </tbody>
-
-</table>
+</table> 
 

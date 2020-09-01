@@ -1,7 +1,8 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { LeerlingService } from '../../service/leerling.service';
 import { LeerlingDto } from '../../models/LeerlingDto';
-
+import { KlasDto } from 'src/app/models/KlasDto';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -19,11 +20,12 @@ export class LeerlingTabelComponent implements OnInit {
     geboortedatum : undefined,
     id : undefined
   }
+  klassen: KlasDto[];
 
   // tempsIds : number[]; voor editten later
 
-  constructor(private ls: LeerlingService) { }
-
+  constructor(private ls: LeerlingService, private router: Router) { }
+  
   ngOnInit(): void {
 
     this.ls.findLeerlingen().subscribe( lijstVanLeerlingen => {
@@ -36,11 +38,8 @@ export class LeerlingTabelComponent implements OnInit {
   maakTabelLeeg(){
     this.leerlingen = [];
   }
-  refreshTabel(){ 
-    this.ls.findLeerlingen().subscribe( lijstVanLeerlingen =>{
-      this.leerlingen = lijstVanLeerlingen;
-    })
-  }
+  
+  
 
 /*
   saveIds(clickedLeerling : LeerlingService){

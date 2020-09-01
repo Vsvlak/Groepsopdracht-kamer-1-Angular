@@ -38,6 +38,9 @@ export class KlastabelComponent implements OnInit {
   bekijkToetsen(k : KlasDto){
     this.router.navigateByUrl('klas/' + k.id + '/toetsen');
   }
+  bekijkKlas(k: KlasDto){
+    this.router.navigateByUrl('/klas/' + k.id);
+  }
 
   slaKlasOp(): void{
     this.klas.naam = (<HTMLInputElement>document.getElementById("naamInput")).value;
