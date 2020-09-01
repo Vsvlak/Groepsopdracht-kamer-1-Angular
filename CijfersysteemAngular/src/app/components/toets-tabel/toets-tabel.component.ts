@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ToetsService } from '../../service/toets.service';
 import { ToetsDto } from '../../models/ToetsDto';
+import { DocentService } from 'src/app/service/docent.service';
+import { DocentDto } from 'src/app/models/DocentDto';
+import { VakService } from 'src/app/service/vak.service';
+import { VakDto } from 'src/app/models/VakDto';
+import { KlasService } from 'src/app/service/klas.service';
+import { KlasDto } from 'src/app/models/KlasDto';
+
+
 
 @Component({
   selector: 'app-toets-tabel',
@@ -10,21 +18,28 @@ import { ToetsDto } from '../../models/ToetsDto';
 export class ToetsTabelComponent implements OnInit {
 
   toetsen: ToetsDto[];
-  toets: ToetsDto = {
-    datum : undefined,
-    tijd : undefined,
-    docent : undefined,
-    vak : undefined,
-    klas : undefined,
-    id : undefined
-  }
+  toets = new ToetsDto();
+  docenten: DocentDto[];
+  vakken: VakDto[];
+  klassen: KlasDto[];
 
-  constructor(private ts: ToetsService) { }
+  constructor(private ts: ToetsService, private ds: DocentService, private vs: VakService, 
+    private ks: KlasService) { }
 
   ngOnInit(): void {
     this.ts.findToetsen().subscribe( toetsenLijst => {
       this.toetsen = toetsenLijst;
     })
+    this.ds.findDocenten().subscribe( docentenLijst => {
+      this.docenten = docentenLijst;
+    })
+    this.vs.findVakken().subscribe( vakkenLijst => {
+      this.vakken = vakkenLijst;
+    })
+    this.ks.findKlassen().subscribe( klassenLijst => {
+      this.klassen = klassenLijst;
+    })
+
   }
 
   maakTabelLeeg(){
@@ -32,11 +47,11 @@ export class ToetsTabelComponent implements OnInit {
   }
 
   slaToetsOp(): void{
-    this.toets.datum= (<HTMLInputElement>document.getElementById("datumInput")).value;
-    this.toets.tijd = (<HTMLInputElement>document.getElementById("tijdInput")).value;
-    this.toets.docent = (<HTMLInputElement>document.getElementById("docentInput")).value;
-    this.toets.vak = (<HTMLInputElement>document.getElementById("vakInput")).value;
-    this.toets.klas = (<HTMLInputElement>document.getElementById("klasInput")).value;
-    this.ts.maakToetsAan(this.toets).subscribe( (toets) => console.log(toets));
+    console.log(this.toets);
+     this.ts.maakToetsAan(this.toets).subscribe( (toets) => console.log(toets));
+  }
+
+  setdocent(e){ 
+    console.log(e.target.value);
   }
 }

@@ -3,11 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { KlasDto } from '../models/KlasDto';
 import { LeerlingDto} from '../models/LeerlingDto';
+import { LeerlingService } from './leerling.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KlasService {
+
+  leerling: LeerlingDto;
 
   constructor(private http: HttpClient) { }
 
@@ -29,8 +32,8 @@ export class KlasService {
 
 
 
-  voegLeerlingToe2(leerling:LeerlingDto): Observable<any>{
-  return this.http.post<any>('http://localhost:8082/api/voegLeerlingToe', leerling.id);
+  voegLeerlingToe2(leerling: number): Observable<LeerlingDto>{
+  console.log("aaa" + LeerlingDto);
+  return this.http.post<any>('http://localhost:8082/api/voegLeerlingToe', leerling);
 }
 }
-// /api/voegLeerlingToe

@@ -50,13 +50,22 @@ ks: KlasService;
    var NieuweLeerlingInKlas = (<HTMLInputElement> document.getElementById('kiesleerling')).value;
    var idNieuweLeerlingInKlas =  NieuweLeerlingInKlas.split(".")[0];
    console.log(NieuweLeerlingInKlas + " eerste ");
-   console.log(this.leerlingen.length + " " + idNieuweLeerlingInKlas);
-   idNieuweLeerlingInKlas
+   console.log(idNieuweLeerlingInKlas);
 
+     
+  this.ks.voegLeerlingToe2(parseInt(idNieuweLeerlingInKlas)).subscribe((value)=> 
+  this.leerling = value);
 
+       
+      //  this.ks.voegLeerlingToe2(this.leerlingenDrop[i]).subscribe(() => 
+      //  console.log(LeerlingDto +  " hier2"));
+    }
+  
 
+  
 
-   // this.ks.voegLeerlingToe2(idNieuweLeerlingInKlas);
-  }
+  //  this.ks.voegLeerlingToe2(parseInt(idNieuweLeerlingInKlas)).subscribe(idNieuweLeerlingInKlas=> 
+  //   { this.leerling.id = idNieuweLeerlingInKlas});
+  // }
 
 } 

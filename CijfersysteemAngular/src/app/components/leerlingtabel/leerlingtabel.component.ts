@@ -35,11 +35,8 @@ export class LeerlingTabelComponent implements OnInit {
   maakTabelLeeg(){
     this.leerlingen = [];
   }
-  refreshTabel(){ 
-    this.ls.findLeerlingen().subscribe( lijstVanLeerlingen =>{
-      this.leerlingen = lijstVanLeerlingen;
-    })
-  }
+  
+  
 
 /*
   saveIds(clickedLeerling : LeerlingService){
@@ -54,6 +51,6 @@ export class LeerlingTabelComponent implements OnInit {
     this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;
     this.ls.maakLeerlingAan(this.leerling).subscribe( (leerling) => console.log(leerling));
-    this.refreshTabel();
+
   }
 }
