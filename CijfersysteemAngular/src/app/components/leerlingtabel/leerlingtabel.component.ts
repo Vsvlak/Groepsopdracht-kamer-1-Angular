@@ -37,11 +37,8 @@ export class LeerlingTabelComponent implements OnInit {
   maakTabelLeeg(){
     this.leerlingen = [];
   }
-  refreshTabel(){ 
-    this.ls.findLeerlingen().subscribe( lijstVanLeerlingen =>{
-      this.leerlingen = lijstVanLeerlingen;
-    })
-  }
+  
+  
 
 /*
   saveIds(clickedLeerling : LeerlingService){

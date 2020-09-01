@@ -4,11 +4,14 @@ import { Observable } from 'rxjs';
 import { KlasDto } from '../models/KlasDto';
 import { LeerlingDto} from '../models/LeerlingDto';
 import { environment } from '../../environments/environment';
+import { LeerlingService } from './leerling.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KlasService {
+
+  leerling: LeerlingDto;
 
   constructor(private http: HttpClient) { }
 
@@ -20,16 +23,12 @@ export class KlasService {
   findKlas(klasid: number): Observable<KlasDto>{
     return this.http.get<KlasDto>(`${environment.apiURL}/klas/` + klasid);
   }
-
   
   maakKlasAan(klas: KlasDto): Observable<any> {
     return this.http.post<any>(`${environment.apiURL}/api/maakKlas`, klas);
   }
 
-
-
   voegLeerlingToeService(leerling: LeerlingDto): Observable<void>{
     return this.http.post<void>(`${environment.apiURL}/api/voegLeerlingToe`, leerling);
   }
 }
-// /api/voegLeerlingToe
