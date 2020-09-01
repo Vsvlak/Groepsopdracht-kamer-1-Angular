@@ -3,9 +3,8 @@ import { DocentService } from '../../service/docent.service';
 import { DocentDto } from '../../models/DocentDto';
 import { VakService } from '../../service/vak.service';
 import { VakDto } from '../../models/VakDto';
-import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-import { ViewDocentVakPageComponent } from 'src/app/view-docent-vak-page/view-docent-vak-page.component';
+//import { ViewDocentVakPageComponent } from 'src/app/view-docent-vak-page/view-docent-vak-page.component';
 
 @Component({
   selector: 'app-docentvaktabel',
@@ -16,30 +15,20 @@ export class DocentvaktabelComponent implements OnInit {
 
   docenten: DocentDto[];
   vakken: VakDto[];
-  ViewDocentVakPageComponent: ViewDocentVakPageComponent[];
+  //ViewDocentVakPageComponent: ViewDocentVakPageComponent[];
 
   constructor(private ds: DocentService, private vs: VakService, private activatedrouter: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.ds.findDocenten().subscribe( lijstVanDocenten => {
-    //   this.docenten = lijstVanDocenten;
-    // });
-
-    // this.vs.findVakken().subscribe( lijstVanVakken => {
-    //   this.vakken = lijstVanVakken;
-    // });
-
-    /*this.activatedrouter.paramMap.subscribe(params =>{ 
-      this.ds.findDocentVakken(Number.parseInt(params.get("docentid"))).subscribe(docentVakkenlijst => {
-        this.docenten = docentVakkenlijst;
-    });
-  })*/
+    this.activatedrouter.paramMap.subscribe(params =>{
+      this.ds.findVakkenVanDocent(Number.parseInt(params.get("docentid"))).subscribe(vakkenlijst => {
+        this.vakken = vakkenlijst;
+      })
+    })
   }
 
-  maakTabelLeeg(){
+  maakTabelLeeg() {
     this.docenten = [];
     this.vakken = [];
-
   }
-
 }

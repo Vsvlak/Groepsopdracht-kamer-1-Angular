@@ -3,7 +3,6 @@ import { LeerlingDto } from 'src/app/models/LeerlingDto';
 import { LeerlingService } from 'src/app/service/leerling.service';
 import { KlasService } from 'src/app/service/klas.service';
 import { ActivatedRoute } from '@angular/router';
-import { ViewLeerlingenPageComponent } from 'src/app/view-leerlingen-page/view-leerlingen-page.component';
 
 
 @Component({

@@ -32,9 +32,13 @@ export class DocenttabelComponent implements OnInit {
   }
 
   bekijkDocentVakken(d: DocentDto){ 
-    this.router.navigateByUrl('/docent/'+ d.id);
-
+    this.router.navigateByUrl('/docent/'+ d.id + '/vakken');
   }
+
+  bekijkDocentKlassen(d: DocentDto){ 
+    this.router.navigateByUrl('/docent/'+ d.id + '/klassen');
+  }
+
   slaDocentOp(): void{
     // this.docent.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
     this.docent.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
