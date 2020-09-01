@@ -8,8 +8,8 @@ import { environment } from '../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
- };
- 
+};
+
 
 @Injectable({
   providedIn: 'root'
@@ -31,11 +31,11 @@ export class LeerlingService {
   }
 
   maakLeerlingAan(leerling: LeerlingDto): Observable<void> {
-    //return this.http.post<void>('http://localhost:8082/api/maakLeerling', leerling);
-    return this.http.post<void>(`${environment.apiURL}/api/maakLeerling`, leerling);
+    return this.http.post<void>('http://localhost:8082/api/maakLeerling', leerling);
   }
 
   findKlassenVanLeerling(leerlingid: number): Observable<KlasDto[]>{
+    //return this.http.post<void>('http://localhost:8082/api/maakLeerling', leerling);
     return this.http.get<KlasDto[]>(`${environment.apiURL}/klassenVanLeerling/` + leerlingid);
   }
 
