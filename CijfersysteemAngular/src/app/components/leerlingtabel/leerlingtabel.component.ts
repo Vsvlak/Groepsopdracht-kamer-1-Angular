@@ -1,8 +1,7 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { LeerlingService } from '../../service/leerling.service';
 import { LeerlingDto } from '../../models/LeerlingDto';
-import { Router } from '@angular/router';
-import { KlasDto } from '../../models/KlasDto';
+
 
 
 @Component({
@@ -14,8 +13,6 @@ import { KlasDto } from '../../models/KlasDto';
 export class LeerlingTabelComponent implements OnInit {
 
   leerlingen: LeerlingDto[];
-
-  
   leerling: LeerlingDto = {
     voornaam : undefined,
     achternaam : undefined,
@@ -23,20 +20,28 @@ export class LeerlingTabelComponent implements OnInit {
     id : undefined
   }
 
-  tempsIds : number[];
-  klassen: KlasDto[];
+  // tempsIds : number[]; voor editten later
 
-  constructor(private ls: LeerlingService, private router: Router) { }
+  constructor(private ls: LeerlingService) { }
 
   ngOnInit(): void {
+
     this.ls.findLeerlingen().subscribe( lijstVanLeerlingen => {
       this.leerlingen = lijstVanLeerlingen;
     });
+
+
   }
 
   maakTabelLeeg(){
     this.leerlingen = [];
   }
+  refreshTabel(){ 
+    this.ls.findLeerlingen().subscribe( lijstVanLeerlingen =>{
+      this.leerlingen = lijstVanLeerlingen;
+    })
+  }
+
 /*
   saveIds(clickedLeerling : LeerlingService){
     this.tempIds = [];
@@ -45,6 +50,7 @@ export class LeerlingTabelComponent implements OnInit {
 */
 
   slaLeerlingOp(): void{
+    // this.leerling.id = parseInt((<HTMLInputElement>document.getElementById("leerlingnrInput")).value);
     this.leerling.voornaam = (<HTMLInputElement>document.getElementById("voornaamInput")).value;
     this.leerling.achternaam = (<HTMLInputElement>document.getElementById("achternaamInput")).value;
     this.leerling.geboortedatum = (<HTMLInputElement>document.getElementById("geboortedatumInput")).value;

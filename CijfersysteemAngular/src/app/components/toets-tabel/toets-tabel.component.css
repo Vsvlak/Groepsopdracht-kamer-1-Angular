@@ -1,0 +1,6 @@
+.modal-text{
+    padding: 10px 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
