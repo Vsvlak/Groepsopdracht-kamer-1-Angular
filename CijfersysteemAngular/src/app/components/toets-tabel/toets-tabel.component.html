@@ -53,6 +53,7 @@
           <select [(ngModel)]="toets.vakid" id="kiesvak" (change)="dropdownKlassenVanDocentVak()">
               <option *ngFor= "let vak of vakken" value="{{vak.id}}">{{vak.naam}}</option>
             </select>
+          </div>
         <div class="modal-text"> Klas
           <select [(ngModel)]="toets.klasid">
             <option *ngFor= "let klas of klassen" value="{{klas.id}}">{{klas.naam}}</option>
