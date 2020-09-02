@@ -41,6 +41,7 @@ import { KlasService } from './service/klas.service';
 import { LeerlingService } from './service/leerling.service';
 import { ToetsService } from './service/toets.service';
 import { VakService } from './service/vak.service';
+import { DocentVakService } from './service/docent-vak.service';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { VakService } from './service/vak.service';
     KlasService,
     LeerlingService,
     ToetsService,
-    VakService
+    VakService,
+    DocentVakService
   ],
   bootstrap: [AppComponent]
 })

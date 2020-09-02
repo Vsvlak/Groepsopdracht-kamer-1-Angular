@@ -26,7 +26,6 @@ export class ToetsService {
   }
   
   maakToetsAan(toets: ToetsDto): Observable<any> {
-    console.log(toets);
     return this.http.post<any>(`${environment.apiURL}/api/maakToets`, toets);
   }
 }

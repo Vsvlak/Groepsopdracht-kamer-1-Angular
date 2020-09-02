@@ -5,6 +5,7 @@ import { DocentDto } from '../models/DocentDto';
 import { environment } from '../../environments/environment';
 import { KlasDto } from '../models/KlasDto';
 import { VakDto } from '../models/VakDto';
+import { DocentVakDto } from '../models/DocentVakDto';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,6 @@ import { VakDto } from '../models/VakDto';
 export class DocentService {
 
   constructor(private http: HttpClient) { }
-
 
   findDocenten(): Observable<DocentDto[]> {
     return this.http.get<DocentDto[]>(`${environment.apiURL}/docentOverzicht`)
@@ -30,11 +30,16 @@ export class DocentService {
   findKlassenVanDocent(docentid: number): Observable<KlasDto[]>{
     return this.http.get<KlasDto[]>(`${environment.apiURL}/klassenVanDocent/` + docentid);
   }
+  
   findVakkenVanDocent(docentid: number): Observable<VakDto[]>{
     return this.http.get<VakDto[]>(`${environment.apiURL}/vakkenVanDocent/` + docentid);
   }
 
   findKlassenVanDocentVak(docentid: number, vakid: number): Observable<KlasDto[]>{
     return this.http.get<KlasDto[]>(`${environment.apiURL}/klassenVanDocentEnVak/` + docentid + "/" + vakid);
+  }
+
+  voegVakToe(docentvak: DocentVakDto): Observable<any>{
+    return this.http.post<any>("http://localhost:8082/maakDocentVak", docentvak);
   }
 }

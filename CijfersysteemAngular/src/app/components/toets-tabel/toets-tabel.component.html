@@ -12,9 +12,9 @@
       <td>{{ToetsDto.id}}</td>
       <td>{{ToetsDto.datum}}</td>
       <td>{{ToetsDto.tijd}}</td>
-      <td>{{ToetsDto.docentid}}</td>
-      <td>{{ToetsDto.vakid}}</td>
-      <td>{{ToetsDto.klasid}}</td>
+      <td>{{ToetsDto.docentnaam}}</td>
+      <td>{{ToetsDto.vaknaam}}</td>
+      <td>{{ToetsDto.klasnaam}}</td>
     </tr>
     <tr>
       <td>
@@ -45,12 +45,12 @@
         <div class="modal-text"> Tijd
           <input type="text" [(ngModel)]="toets.tijd"></div>
         <div class="modal-text"> Docent
-            <select [(ngModel)]="toets.docentid">
+            <select [(ngModel)]="toets.docentid" id="kiesdocent" (change)="dropDownVakkenVanDocent()">
               <option *ngFor= "let docent of docenten" value="{{docent.id}}">{{docent.voornaam}}</option>
             </select>
           </div>
         <div class="modal-text"> Vak
-          <select [(ngModel)]="toets.vakid">
+          <select [(ngModel)]="toets.vakid" id="kiesvak" (change)="dropdownKlassenVanDocentVak()">
               <option *ngFor= "let vak of vakken" value="{{vak.id}}">{{vak.naam}}</option>
             </select>
           </div>
