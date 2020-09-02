@@ -46,3 +46,4 @@ export class DocenttabelComponent implements OnInit {
     this.ds.maakDocentAan(this.docent).subscribe( (docent) => console.log(docent));
   }
 }
+
