@@ -15,6 +15,7 @@ export class DocentVakkenTabelComponent implements OnInit {
 
   vakken: VakDto[];
   docentvak: DocentVakDto = {
+    id: undefined,
     docentid: undefined,
     vakid: undefined
   }
