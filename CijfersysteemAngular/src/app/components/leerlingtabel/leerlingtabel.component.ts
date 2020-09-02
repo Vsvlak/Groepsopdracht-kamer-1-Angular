@@ -1,8 +1,9 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { LeerlingService } from '../../service/leerling.service';
 import { LeerlingDto } from '../../models/LeerlingDto';
-import { Router } from '@angular/router';
-import { KlasDto } from '../../models/KlasDto';
+import { KlasDto } from 'src/app/models/KlasDto';
+import { Router } from '@angular/router'
+
 
 @Component({
   selector: 'app-leerlingtabel',

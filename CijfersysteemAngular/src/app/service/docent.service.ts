@@ -25,18 +25,18 @@ export class DocentService {
   }
 
   findDocent(docentid: number): Observable<DocentDto>{
-    return this.http.get<DocentDto>("http://localhost:8082/docent/" + docentid);
+    return this.http.get<DocentDto>(`${environment.apiURL}/docent/` + docentid);
   }
   findKlassenVanDocent(docentid: number): Observable<KlasDto[]>{
-    return this.http.get<KlasDto[]>("http://localhost:8082/klassenVanDocent/" + docentid);
+    return this.http.get<KlasDto[]>(`${environment.apiURL}/klassenVanDocent/` + docentid);
   }
   
   findVakkenVanDocent(docentid: number): Observable<VakDto[]>{
-    return this.http.get<VakDto[]>("http://localhost:8082/vakkenVanDocent/" + docentid);
+    return this.http.get<VakDto[]>(`${environment.apiURL}/vakkenVanDocent/` + docentid);
   }
 
   findKlassenVanDocentVak(docentid: number, vakid: number): Observable<KlasDto[]>{
-    return this.http.get<KlasDto[]>("http://localhost:8082/klassenVanDocentEnVak/" + docentid + "/" + vakid);
+    return this.http.get<KlasDto[]>(`${environment.apiURL}/klassenVanDocentEnVak/` + docentid + "/" + vakid);
   }
 
   voegVakToe(docentvak: DocentVakDto): Observable<any>{
