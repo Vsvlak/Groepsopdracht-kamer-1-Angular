@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ToetsService } from '../../service/toets.service';
 import { ToetsDto } from '../../models/ToetsDto';
-import { DocentService } from 'src/app/service/docent.service';
-import { DocentDto } from 'src/app/models/DocentDto';
-import { VakService } from 'src/app/service/vak.service';
-import { VakDto } from 'src/app/models/VakDto';
-import { KlasService } from 'src/app/service/klas.service';
-import { KlasDto } from 'src/app/models/KlasDto';
+import { DocentService } from '../../service/docent.service';
+import { DocentDto } from '../../models/DocentDto';
+import { VakService } from '../../service/vak.service';
+import { VakDto } from '../../models/VakDto';
+import { KlasService } from '../../service/klas.service';
+import { KlasDto } from '../../models/KlasDto';
 import { DocentVakService } from '../../service/docent-vak.service';
 
 @Component({
@@ -20,7 +20,6 @@ export class ToetsTabelComponent implements OnInit {
   toets = new ToetsDto();
   docent = new DocentDto();
   docenten: DocentDto[];
-  docent = new DocentDto();
   vakken: VakDto[];
   klassen: KlasDto[];
 
