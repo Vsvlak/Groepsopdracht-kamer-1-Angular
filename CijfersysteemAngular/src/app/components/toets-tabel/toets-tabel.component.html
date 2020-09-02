@@ -43,16 +43,16 @@
         <div class="modal-text"> Tijd
           <input type="text" [(ngModel)]="toets.tijd"></div>
         <div class="modal-text"> Docent
-            <select [(ngModel)]="toets.docentId">
+            <select [(ngModel)]="toets.docentid">
               <option *ngFor= "let docent of docenten" value="{{docent.id}}">{{docent.voornaam}}</option>
             </select>
           </div>
         <div class="modal-text"> Vak
-          <select [(ngModel)]="toets.vakId">
+          <select [(ngModel)]="toets.vakid">
               <option *ngFor= "let vak of vakken" value="{{vak.id}}">{{vak.naam}}</option>
             </select>
         <div class="modal-text"> Klas
-          <select [(ngModel)]="toets.klasId">
+          <select [(ngModel)]="toets.klasid">
             <option *ngFor= "let klas of klassen" value="{{klas.id}}">{{klas.naam}}</option>
           </select>
       </div>
