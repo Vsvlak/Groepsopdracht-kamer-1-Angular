@@ -30,6 +30,7 @@ export class DocentService {
   findKlassenVanDocent(docentid: number): Observable<KlasDto[]>{
     return this.http.get<KlasDto[]>("http://localhost:8082/klassenVanDocent/" + docentid);
   }
+  
   findVakkenVanDocent(docentid: number): Observable<VakDto[]>{
     return this.http.get<VakDto[]>("http://localhost:8082/vakkenVanDocent/" + docentid);
   }
