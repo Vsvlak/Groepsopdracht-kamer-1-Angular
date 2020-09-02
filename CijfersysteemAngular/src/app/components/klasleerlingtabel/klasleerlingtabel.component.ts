@@ -46,6 +46,6 @@ export class KlasleerlingtabelComponent implements OnInit {
     this.activatedrouter.paramMap.subscribe(params => {
       this.klasleerling.klasid = Number.parseInt(params.get("klasid"));
     })
-    this.ks.voegLeerlingToeService(this.klasleerling);   
+    this.ks.voegLeerlingToeService(this.klasleerling).subscribe();   
   }
 } 
