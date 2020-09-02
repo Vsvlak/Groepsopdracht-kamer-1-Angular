@@ -20,7 +20,6 @@ export class ToetsTabelComponent implements OnInit {
   toets = new ToetsDto();
   docent = new DocentDto();
   docenten: DocentDto[];
-  docent = new DocentDto();
   vakken: VakDto[];
   klassen: KlasDto[];
 
