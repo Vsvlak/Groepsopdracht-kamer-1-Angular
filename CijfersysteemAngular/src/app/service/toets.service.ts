@@ -17,7 +17,7 @@ export class ToetsService {
     return this.http.get<ToetsDto[]>(`${environment.apiURL}/toetsOverzicht`);
   }
 
-  findToetsenVanVakken(vakid: number): Observable<ToetsDto[]> {
+  findToetsenVanVak(vakid: number): Observable<ToetsDto[]> {
     return this.http.get<ToetsDto[]>(`${environment.apiURL}/toonToetsenVanVak/` + vakid);
   }
 

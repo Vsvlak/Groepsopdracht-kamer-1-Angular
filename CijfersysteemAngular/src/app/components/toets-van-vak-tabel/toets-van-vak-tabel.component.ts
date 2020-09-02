@@ -16,7 +16,7 @@ export class ToetsVanVakTabelComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedrouter.paramMap.subscribe(params =>{
-      this.ts.findToetsenVanVakken(Number.parseInt(params.get("vakid"))).subscribe(toetsenlijst => {
+      this.ts.findToetsenVanVak(Number.parseInt(params.get("vakid"))).subscribe(toetsenlijst => {
         this.toetsen = toetsenlijst;
       });
     })
