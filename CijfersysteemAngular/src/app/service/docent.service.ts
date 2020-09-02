@@ -40,6 +40,6 @@ export class DocentService {
   }
 
   voegVakToe(docentvak: DocentVakDto): Observable<any>{
-    return this.http.post<any>("http://localhost:8082/maakDocentVak", docentvak);
+    return this.http.post<any>(`${environment.apiURL}/maakDocentVak`, docentvak);
   }
 }

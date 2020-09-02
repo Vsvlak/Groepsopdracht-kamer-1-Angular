@@ -19,10 +19,10 @@ export class DocentVakService {
 
   voegDocentVakToe(docentvak: DocentVakDto, klasid: number): Observable<any>{
     console.log("in service");
-    return this.http.post<any>("http://localhost:8082/api/voegDocentVakToe/" + klasid, docentvak);
+    return this.http.post<any>(`${environment.apiURL}/api/voegDocentVakToe/` + klasid, docentvak);
   }
 
   findDocentVak(d: DocentDto, v: VakDto){
-    return this.http.get<DocentVakDto>("http://localhost:8082/klassenVanDocentEnVak/"+ d.id + "/" + v.id);
+    return this.http.get<DocentVakDto>(`${environment.apiURL}/klassenVanDocentEnVak/`+ d.id + "/" + v.id);
   }
 }
