@@ -20,6 +20,7 @@ export class ToetsTabelComponent implements OnInit {
   toets = new ToetsDto();
   docent = new DocentDto();
   docenten: DocentDto[];
+  docent = new DocentDto();
   vakken: VakDto[];
   klassen: KlasDto[];
 
@@ -51,10 +52,6 @@ export class ToetsTabelComponent implements OnInit {
     this.ts.maakToetsAan(this.toets).subscribe();
   }
 
-  setdocent(e) {
-    console.log(e.target.value);
-  }
-
   dropDownVakkenVanDocent() {
     var docentid = Number.parseInt((<HTMLInputElement>document.getElementById("kiesdocent")).value);
     this.ds.findVakkenVanDocent(docentid).subscribe(vakkenVanDocent => {
@@ -71,18 +68,5 @@ export class ToetsTabelComponent implements OnInit {
     this.ds.findKlassenVanDocentVak(docentid, vakid).subscribe(klassen => {
       this.klassen = klassen;
     })
-  }
-
-  findDocent(docentid: number): String {
-    console.log("finddocent");
-    let naam = null;
-    this.ds.findDocent(docentid).subscribe(d => {
-     naam = d.achternaam;
-    })
-    return naam;
-  }
-
-  findDocent2(){
-    console.log("test");
   }
 }

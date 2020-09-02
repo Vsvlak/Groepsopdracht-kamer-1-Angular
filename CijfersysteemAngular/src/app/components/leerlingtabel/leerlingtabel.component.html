@@ -1,5 +1,5 @@
-<table class="table table-striped">
-  <thead>
+<table class="table table-hover colorfill" style= "font-family: monospace">
+  <thead class="colorheader">
     <th>Studentnummer</th>
     <th>Voornaam</th>
     <th>Achternaam</th>
@@ -12,13 +12,13 @@
       <td>{{leerlingDto.achternaam}}</td>
       <td>{{leerlingDto.geboortedatum}}</td>
       <td>
-        <button class="btn btn-primary" type="button" (click)="bekijkKlas(leerlingDto)">Bekijk klas</button>
+        <button class="btn buttonLook" type="button" (click)="bekijkKlas(leerlingDto)">Bekijk klas</button>
         <!--FITYMI: een leerling kan in meerdere klassen zitten, wij gaan hier uit van 1-->
       </td>
     </tr>
     <tr>
       <td>
-        <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
+        <button class="buttonLook" type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Leerling Aan</button>
       </td>
       <td></td>
       <td></td>
