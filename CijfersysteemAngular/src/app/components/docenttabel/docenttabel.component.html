@@ -1,6 +1,5 @@
-<p>docenttabel works!</p>
 
-<table class="table table-striped">
+<table class="table table-hover colorfill"style= "font-family: monospace">
     <thead>
         <tr>
             <th>Docentnummer</th>
@@ -15,12 +14,12 @@
             <td>{{docentDto.voornaam}}</td>
             <td>{{docentDto.achternaam}}</td>
             <td>
-                <button class="btn btn-primary" type= "button" (click)="bekijkDocentVakken(docentDto)">Vakken</button>
+                <button class="btn buttonLook" type= "button" (click)="bekijkDocentVakken(docentDto)">Vakken</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Docent Aan</button>
+                <button type="button" class="buttonLook" data-toggle="modal" data-target="#exampleModalCenter">Maak Docent Aan</button>
             </td>
             <td></td><td></td><td></td>
         </tr>

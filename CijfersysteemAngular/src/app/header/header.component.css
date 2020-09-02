@@ -16,10 +16,21 @@
    max-height: 60px;
    max-width: 60px;
   }
-  
-  .bolder{
-    font-weight: bold;
-    font-size: 20px;
-    font-family: monospace;
+  .homebutton:hover{
+    opacity: 50%;
   }
 
+  
+  .bolder{
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: monospace;
+    background-color: brown;
+  }
+
+  .bolder:hover{
+    font-weight: lighter;
+    opacity: 50%;
+    
+    
+  }

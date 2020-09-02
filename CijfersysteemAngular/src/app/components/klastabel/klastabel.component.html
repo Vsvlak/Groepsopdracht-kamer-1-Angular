@@ -1,29 +1,29 @@
-<table class="table table-striped">
-    <thead>
+<table class="table table-hover colorfill"style= "font-family: monospace">
+    <thead >
         <tr>
             <th>Klasnummer</th>
             <th>Naam</th>
             <th>Niveau</th>
         </tr>
     </thead>
-    <tbody>
-        <tr *ngFor="let klasDto of klassen">
-            <td>{{klasDto.id}}</td>
-            <td>{{klasDto.naam}}</td>
-            <td>{{klasDto.niveau}}</td>
-            <td>
-                <button class="btn btn-primary" type="button" (click)="bekijkLeerlingen(klasDto)">Leerlingen</button>
+    <tbody >
+        <tr *ngFor="let klasDto of klassen" >
+            <td >{{klasDto.id}}</td>
+            <td >{{klasDto.naam}}</td>
+            <td >{{klasDto.niveau}}</td>
+            <td >
+                <button class="btn buttonLook"type="button" (click)="bekijkLeerlingen(klasDto)">Leerlingen</button>
             </td>
             <td>
-                <button class="btn btn-primary" type="button" (click)="bekijkVakken(klasDto)">Vakken</button>
+                <button class="btn  buttonLook" type="button" (click)="bekijkVakken(klasDto)">Vakken</button>
             </td>
             <td>
-                <button class="btn btn-primary" type="button" (click)="bekijkToetsen(klasDto)">Toetsen</button>
+                <button class="btn  buttonLook" type="button" (click)="bekijkToetsen(klasDto)">Toetsen</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Maak Klas Aan</button>
+                <button type="button" class="buttonLook" data-toggle="modal" data-target="#exampleModalCenter">Maak Klas Aan</button>
             </td>
             <td></td><td></td><td></td>
         </tr>
