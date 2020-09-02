@@ -20,6 +20,7 @@ export class ToetsTabelComponent implements OnInit {
   toetsen: ToetsDto[];
   toets = new ToetsDto();
   docenten: DocentDto[];
+  docent = new DocentDto();
   vakken: VakDto[];
   klassen: KlasDto[];
 
@@ -51,7 +52,5 @@ export class ToetsTabelComponent implements OnInit {
      this.ts.maakToetsAan(this.toets).subscribe( (toets) => console.log(toets));
   }
 
-  setdocent(e){ 
-    console.log(e.target.value);
-  }
+
 }
