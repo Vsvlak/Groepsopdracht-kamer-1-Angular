@@ -5,4 +5,7 @@ export class ToetsDto{
     docentid: number;
     vakid: number;
     klasid: number;
+    docentnaam: String;
+    vaknaam: String;
+    klasnaam: String;
 }

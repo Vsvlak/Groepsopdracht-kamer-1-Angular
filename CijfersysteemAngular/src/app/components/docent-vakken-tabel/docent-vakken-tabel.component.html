@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<table class="table table-hover colorfill" style= "font-family: monospace">
     <thead>
         <th>ID</th>
         <th>Naam</th>
@@ -8,7 +8,15 @@
             <td>{{VakDto?.id}}</td>
             <td>{{VakDto?.naam}}</td>
             <td>
-                <button class="btn btn-primary" type= "button" (click)="bekijkKlassen(VakDto)">Klassen</button>
+                <button class="btn buttonLook" type= "button" (click)="bekijkKlassen(VakDto)">Klassen</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select id="kiesvak">Selecteer Vak</select>
+            </td>
+            <td>
+                <button type="button" class="buttonLook" (click)="voegVakToe()">Voeg toe</button>
             </td>
         </tr>
     </tbody>

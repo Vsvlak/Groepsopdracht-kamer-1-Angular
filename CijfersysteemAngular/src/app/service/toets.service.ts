@@ -17,7 +17,7 @@ export class ToetsService {
     return this.http.get<ToetsDto[]>(`${environment.apiURL}/toetsOverzicht`);
   }
 
-  findToetsenVanVakken(vakid: number): Observable<ToetsDto[]> {
+  findToetsenVanVak(vakid: number): Observable<ToetsDto[]> {
     return this.http.get<ToetsDto[]>(`${environment.apiURL}/toonToetsenVanVak/` + vakid);
   }
 
@@ -26,7 +26,6 @@ export class ToetsService {
   }
   
   maakToetsAan(toets: ToetsDto): Observable<any> {
-    console.log(toets);
     return this.http.post<any>(`${environment.apiURL}/api/maakToets`, toets);
   }
 }
